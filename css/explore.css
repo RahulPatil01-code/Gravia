@@ -1,0 +1,434 @@
+h1, h2, h3, .highlight {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+body, p, a, li {
+    font-family: 'Lora', serif;  /* Option 1 */
+    /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
+}
+
+/* Ensures that body and html have no margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* /* Navbar Styling */
+    .navbar {
+        /* position: absolute; Overlay on hero image */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.5); /* Dark transparent effect */
+        padding: 10px 30px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: black !important;
+        font-family: 'Cinzel', serif;
+    } 
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding-bottom: 0px; /* Space for animation */
+}
+
+.nav-link::after,
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%) translateY(5px); /* Start below */
+    opacity: 0; /* Initially hidden */
+}
+
+.nav-link::after {
+    width: 70%; /* Full-width underline */
+    bottom: -5px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.nav-link::before {
+    width: 50%; /* Smaller underline */
+    bottom: -10px;
+    transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s; 
+    /* 0.2s delay to appear AFTER the first line */
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0s; /* No delay on first line */
+}
+
+.nav-link:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0.2s; /* Appears after first line */
+}
+
+.nav-link:not(:hover)::before {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+    transition-delay: 0s; /* Disappear first */
+}
+
+.nav-link:not(:hover)::after {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+    transition-delay: 0.2s; /* Disappear after second line */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../src/italian.jpg'); /* Default Image */
+    transition: background-image 1s ease-in-out; /* Smooth transition */
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1, .hero-overlay p {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero-overlay.fade-in h1,
+.hero-overlay.fade-in p {
+    opacity: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+
+
+
+/* Content Products */
+
+.text-content {
+    
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-10%, -50%);
+    max-width: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 991px) {
+    .text-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.highlight {
+    color: #ff7f3f;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.btn-read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff7f3f;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-read-more:hover {
+    background: #ff5722;
+}
+
+.section-reverse .row {
+    flex-direction: row-reverse; /* Flip row layout */
+}
+
+.section-reverse .text-content {
+    text-align: left; /* Ensure text is properly aligned */
+    padding: 20px;
+}
+
+.section-reverse img {
+    width: 100%; /* Ensures the image takes full space */
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+  /* Content Sections */
+  .content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 100px;
+    gap: 60px;
+  }
+  .image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .image img:hover {
+    transform: scale(1.05);
+  }
+  .text {
+    max-width: 450px;
+    text-align: left;
+  }
+  .text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  .text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #ff9900;
+    color: #ff9900;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: #ff9900;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px;
+    }
+    .image img {
+      max-width: 90%;
+    }
+  }
+
+
+
+/* colletion section */
+.gallery {
+    padding: 50px 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+/* Initially hide the button */
+.quote-btn {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    background: #ff5722;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px auto 0;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect to expand the card and show button */
+.card:hover {
+    transform: scale(1.02);
+    height: 350px; /* Expands slightly from the bottom */
+}
+
+.card:hover .quote-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (hover: hover) {
+    .card:hover {
+        transform: scale(1.02);
+        height: 350px; /* Expands slightly from the bottom */
+    }
+
+    .card:hover .quote-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Mobile Optimizations */
+@media screen and (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .card img {
+        height: 220px; /* Slightly smaller images for better fit */
+    }
+
+    .quote-btn {
+        opacity: 1;  /* Always visible on mobile */
+        transform: translateY(0);
+    }
+}
+
+
+
+ /* Explore Collection Button */
+ .explore-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff5722;  /* Vibrant color */
+    color: white;
+    font-size: 16px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.explore-btn:hover {
+    background: #e64a19; /* Slightly darker */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+
+

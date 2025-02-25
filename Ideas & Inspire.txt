@@ -1,0 +1,37 @@
+Marble Website
+
+sbadmin for admin theme
+
+
+Inspire & Idea
+
+Amazon
+dribble 
+IKEA
+slabmarket.com
+marble.com
+italianmarble.com
+
+
+1. palette {Gold, black, Gray } More luxury color
+2. Font italic pref {Marco} Look should be rich and elegant 
+	Cinzel Head
+	Lora body or open sans
+3. Image High quality {Behance, }
+
+ 
+Hover effect, light fade in and out effects. 
+button or hover can change in gold or theme.
+Rounded edges or sharp corners with solid gold or black fills.
+little bit of shadows or gradient.
+gold or silver line-style icons for navigation or services.
+
+
+Example Premium Color Scheme
+Element	Color Code
+Background	#000000 (Black)
+Text	#FFFFFF (White)
+Highlight	#D4AF37 (Gold)
+Secondary	#C0C0C0 (Silver)
+Accent	#046307 (Emerald Green)
+W

@@ -1,0 +1,13 @@
+After Feedback it should show on main page dynamically.
+
+marble_business
+
+2️⃣ Tables & Their Purpose:
+1️⃣ users → Stores customer & admin details
+2️⃣ products → Stores marble listings (name, category, price, etc.)
+3️⃣ quotes → Stores price requests from customers
+4️⃣ orders → Stores customer purchases
+5️⃣ payments → Stores payment transactions
+6️⃣ feedback → Stores customer reviews & ratings
+7️⃣ contact_messages → Stores customer inquiries
+8️⃣ admins → Stores separate admin accounts like staff manager owner or any other
