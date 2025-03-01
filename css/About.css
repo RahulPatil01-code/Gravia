@@ -438,3 +438,118 @@ p {
 }
 
 
+/* Responsivness */
+
+
+/* Global responsive adjustments */
+@media (max-width: 991px) {
+    h2 {
+        font-size: 28px !important;
+    }
+    
+    p {
+        font-size: 15px !important;
+    }
+    
+    /* Improved navbar for mobile */
+    .navbar-nav {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    /* Hero section responsive fixes */
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Transportation section responsive */
+    .transportation-section {
+        padding: 40px 15px !important;
+    }
+    
+    .image-container {
+        margin-top: 40px;
+    }
+    
+    /* Fix modal for mobile */
+    .modal-content {
+        width: 90% !important;
+        margin: 20% auto !important;
+        padding: 15px !important;
+    }
+}
+
+/* Specific fixes for extra small devices */
+@media (max-width: 576px) {
+    /* Hero adjustments */
+    .hero {
+        height: 50vh !important;
+    }
+    
+    /* Fix button container layout */
+    .btn-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-info {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    /* Fix image positioning */
+    .main-image {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .small-image-box {
+        width: 150px !important;
+        height: 150px !important;
+        right: 0 !important;
+    }
+    
+    .small-image {
+        height: 150px !important;
+    }
+    
+    .experience-box {
+        left: -30px !important;
+        font-size: 12px !important;
+    }
+    
+    /* About section fixes */
+    .about-wrapper {
+        width: 95% !important;
+        gap: 25px !important;
+    }
+    
+    .about-main-img {
+        width: 100% !important;
+        height: auto !important;
+        margin-right: 0 !important;
+    }
+    
+    .about-small-img-box {
+        left: 15px !important;
+    }
+    
+    .about-small-img {
+        width: 120px !important;
+    }
+    
+    .about-text p {
+        width: 100% !important;
+    }
+    
+    .about-features {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+}
+
+
