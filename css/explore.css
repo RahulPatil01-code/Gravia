@@ -90,6 +90,29 @@ html, body {
     transition-delay: 0.2s; /* Disappear after second line */
 }
 
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust the width */
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb (Draggable Part) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Dark grey */
+    border-radius: 10px;
+}
+
+/* Scrollbar on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker grey */
+}
+
+
 
 /* Hero Section */
 .hero {
@@ -98,7 +121,7 @@ html, body {
     height: 70vh;
     background-size: cover;
     background-position: center;
-    background-image: url('../src/italian.jpg'); /* Default Image */
+    background-image: url('../src/explore.hero.jpg'); /* Default Image */
     transition: background-image 1s ease-in-out; /* Smooth transition */
 }
 
@@ -219,6 +242,78 @@ html, body {
 }
 
 
+/* ✅ Ensure Modal Appears in Center */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Modal Image */
+.modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Modal Text */
+.modal p {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ✅ Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.close:hover {
+    color: #d9534f;
+    transform: scale(1.2);
+}
+
+/* ✅ Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 
 
@@ -282,6 +377,26 @@ html, body {
     }
   }
 
+  .btn-warning {
+    background: #ff5722 !important;  /* Vibrant color */
+    color: white !important;  /* Keeps text white */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none; /* Removes Bootstrap outline */
+}
+
+/* Hover Effect */
+.btn-warning:hover {
+    background: #e64a19 !important; /* Slightly darker */
+    transform: scale(1.05);
+    color: white !important; /* Ensures text remains white */
+}
+
+
 
 
 /* colletion section */
@@ -316,7 +431,7 @@ html, body {
 
 .card img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }

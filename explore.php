@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravia Home</title>
+    <title>Explore Gravia | Discover Exquisite Stone Designs</title>
 
     <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -35,10 +35,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Inspiration's</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                     
                 </ul>
@@ -48,9 +48,9 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-overlay"></div> <!-- Dark overlay for better text visibility -->
+    <div class="hero-overlay"> </div><!-- Dark overlay for better text visibility -->
     <div class="hero-content">
-        <h1 id="hero-title">Luxurious Marble Designs</h1>
+        <h1 id="hero-title " >Luxurious Marble Designs</h1>
         <p id="hero-text">Discover the timeless beauty of natural stone.</p>
     </div>
 </section>
@@ -59,78 +59,107 @@
 
 
 <section class="container my-5 position-relative">
-<div class="row align-items-center">
-    <!-- Left Side: Text Content -->
-    <div class="col-lg-6">
-        <h5 class="text-uppercase text-muted">Sustainable Kitchen Dreams</h5>
-        <h2 class="fw-bold">
-            Your Dream <span class="highlight">Kitchen</span> Awaits
-        </h2>
-        <p>
-            We are committed to providing our customers with super exceptional service while offering our employees the best training and a working environment in which they can excel.
-        </p>
-        <p>
-            We understand that the kitchen is the heart of the home, and it should be designed to reflect your individual style and lay out a space for fulfilling your culinary passions.
-        </p>
-        <a href="#" class="btn btn-warning px-4 py-2">Read More</a>
-    </div>
-
-    <!-- Right Side: Image -->
-    <div class="col-lg-6">
-        <img src="./src/italian.jpg" alt="Marble Kitchen" class="img-fluid rounded" loading="lazy">
-    </div>
-</div>
-</section>
-
-<section class="container my-5 position-relative">
-    <div class="row align-items-center">
-        <!-- Left Side: Text Content -->
-          <!-- Right Side: Image -->
-        <div class="col-lg-6">
-            <img src="./src/italian.jpg" alt="Marble Kitchen" class="img-fluid rounded" loading="lazy">
-        </div>
-        <div class="col-lg-6">
-            <h5 class="text-uppercase text-muted">Sustainable Kitchen Dreams</h5>
-            <h2 class="fw-bold">
-                Your Dream <span class="highlight">Kitchen</span> Awaits
-            </h2>
-            <p>
-                We are committed to providing our customers with super exceptional service while offering our employees the best training and a working environment in which they can excel.
-            </p>
-            <p>
-                We understand that the kitchen is the heart of the home, and it should be designed to reflect your individual style and lay out a space for fulfilling your culinary passions.
-            </p>
-            <a href="#" class="btn btn-warning px-4 py-2">Read More</a>
-        </div>
-
-       
-    </div>
-</section>
-
-
-<section class="container my-5 position-relative">
     <div class="row align-items-center">
         <!-- Left Side: Text Content -->
         <div class="col-lg-6">
-            <h5 class="text-uppercase text-muted">Sustainable Kitchen Dreams</h5>
+            <h5 class="text-uppercase text-muted">Timeless Italian Elegance</h5>
             <h2 class="fw-bold">
-                Your Dream <span class="highlight">Kitchen</span> Awaits
+                Beauty of <span class="highlight">Carrara Marble</span>
             </h2>
             <p>
-                We are committed to providing our customers with super exceptional service while offering our employees the best training and a working environment in which they can excel.
+                Carrara Marble, sourced from the world-famous quarries in Italy, is a symbol of luxury and elegance. Its soft white background and delicate gray veining create a sophisticated and timeless look, making it a top choice for architects and designers worldwide.
             </p>
             <p>
-                We understand that the kitchen is the heart of the home, and it should be designed to reflect your individual style and lay out a space for fulfilling your culinary passions.
+                Used in some of the most iconic sculptures and architecture, Carrara Marble is perfect for countertops, flooring, and walls, adding a touch of classic refinement to any space.
             </p>
-            <a href="#" class="btn btn-warning px-4 py-2">Read More</a>
+            
+            <a href="#" class="btn btn-warning px-4 py-2 read-more-link" 
+                data-title="Carrara Marble - Elegance Redefined" 
+                data-image="src/BIANCO-CARRARA.jpg"
+                data-text="Carrara Marble has been quarried since Roman times and has been used in some of the most iconic sculptures and architecture. Michelangelo’s famous statue of David was carved from a single block of Carrara Marble. Known for its durability and smooth texture, it is perfect for sculptures, flooring, countertops, and walls. The subtle gray veining varies in intensity, giving each slab a unique character. Used in high-end residential and commercial interiors, it remains one of the most sought-after marbles in the world.">
+                Read More 
+            </a>
         </div>
-    
+
         <!-- Right Side: Image -->
         <div class="col-lg-6">
-            <img src="./src/italian.jpg" alt="Marble Kitchen" class="img-fluid rounded" loading="lazy">
+            <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid rounded" loading="lazy">
         </div>
     </div>
-    </section>
+</section>
+
+        <div id="exploreModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" class="modal-image" src="" alt="">
+                <p id="modal-text"></p>
+            </div>
+        </div>
+
+
+
+
+
+<section class="container my-5 position-relative">
+    <div class="row align-items-center">
+        <!-- Right Side: Image -->
+        <div class="col-lg-6">
+            <img src="./src/CALACATTA-TORO.jpg" alt="Calacatta Marble" class="img-fluid rounded" loading="lazy">
+        </div>
+
+        <!-- Left Side: Text Content -->
+        <div class="col-lg-6">
+            <h5 class="text-uppercase text-muted">Luxury at Its Finest</h5>
+            <h2 class="fw-bold">
+                Elegance of <span class="highlight">Calacatta Marble</span>
+            </h2>
+            <p>
+                Calacatta Marble is one of the most sought-after marbles, known for its striking white background and bold, dramatic veining. It offers a luxurious and high-end look, making it a favorite for upscale interiors and statement pieces.
+            </p>
+            <p>
+                This Italian masterpiece is perfect for countertops, floors, and wall applications, adding an unparalleled touch of opulence and sophistication to any space.
+            </p>
+                <a href="#"  class="btn btn-warning px-4 py-2 read-more-link" 
+                data-title="Calacatta Marble - Luxury Beyond Compare" 
+                data-image="src/CALACATTA-TORO.jpg"
+                data-text="Calacatta Marble is a rare and luxurious stone with bold, high-contrast veining. Found in the same region as Carrara Marble, it features a whiter background with striking gray and gold veins. Unlike Carrara, Calacatta is rarer and often considered a premium choice for extravagant interiors. It is widely used in grand foyers, high-end countertops, feature walls, and flooring. Due to its distinctive patterns, no two slabs are alike, making it a unique and sought-after material for sophisticated spaces.">
+                Read More 
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 position-relative">
+    <div class="row align-items-center">
+        <!-- Left Side: Text Content -->
+        <div class="col-lg-6">
+            <h5 class="text-uppercase text-muted">Timeless Sophistication</h5>
+            <h2 class="fw-bold">
+                The Warmth of <span class="highlight">Emperador Marble</span>
+            </h2>
+            <p>
+                Emperador Marble is a rich, warm-toned marble known for its deep brown hues and intricate veining. This Spanish marble adds a touch of elegance and sophistication to interiors, making it a perfect choice for luxurious settings.
+            </p>
+            <p>
+                Its unique color palette blends beautifully with both classic and modern designs, making it ideal for countertops, flooring, and decorative features that exude warmth and refinement.
+            </p>
+            <a href="#" 
+               class="btn btn-warning px-4 py-2 read-more-link" 
+               data-title="Warmth of Emperador Marble" 
+               data-image="./src/COFFEE-EMPERADOR.jpg"
+               data-text="Emperador Marble is a stunning natural stone sourced from Spain, featuring a deep brown base with interwoven white and golden veins. It is highly valued for its rich, warm tones that add sophistication to any space. Unlike white marbles, Emperador offers a more dramatic and earthy aesthetic, making it ideal for traditional and contemporary interiors. It is commonly used in luxurious bathroom vanities, fireplace surrounds, flooring, and wall cladding. The natural variations in pattern and color make every Emperador Marble installation unique."
+              >Read More
+            </a>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="col-lg-6">
+            <img src="./src/COFFEE-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid rounded" loading="lazy">
+        </div>
+    </div>
+</section>
 
       
     <div class="container text-center mt-4">
@@ -140,48 +169,53 @@
     
             <div class="col-md-3">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                    <img src="./src/Nero-Marquina-Marble.jpeg" alt="Nero Marquina Marble" class="img-fluid">
                     <div class="card-content">
-                        <h3>Classic White</h3>
-                        <p>Timeless white marble with natural veins.</p>
-                        <a href="login.html" id="quote-btn" class="quote-btn">Discover</a>
+                        <h3>Nero Marquina</h3>
+                        <p>Deep black marble with bold white veins, exuding elegance and luxury.</p>
+                        <a href="login.php" class="quote-btn">Discover</a>
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-3">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                    <img src="./src/CREMA-MARFIL.jpg" alt="Crema Marfil Marble" class="img-fluid">
                     <div class="card-content">
-                        <h3>Classic White</h3>
-                        <p>Timeless white marble with natural veins.</p>
-                        <a href="login.html" id="quote-btn" class="quote-btn">Discover</a>
+                        <h3>Crema Marfil</h3>
+                        <p>Warm beige marble with fine veins, perfect for classic interiors.</p>
+                        <a href="login.php" class="quote-btn">Discover</a>
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-3">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                    <img src="./src/Tropical-Rainforest-Green.jpg" alt="Rainforest Marble" class="img-fluid">
                     <div class="card-content">
-                        <h3>Classic White</h3>
-                        <p>Timeless white marble with natural veins.</p>
-                        <a href="login.html" id="quote-btn" class="quote-btn">Discover</a>
+                        <h3>Rainforest</h3>
+                        <p>Striking green or brown marble with bold, nature-inspired veining.</p>
+                        <a href="login.php" class="quote-btn">Discover</a>
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-3">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                    <img src="./src/ONYX-(-GOLDEN-BROWN-).jpg" alt="Onyx Marble" class="img-fluid">
                     <div class="card-content">
-                        <h3>Classic White</h3>
-                        <p>Timeless white marble with natural veins.</p>
-                        <a href="login.html" id="quote-btn" class="quote-btn">Discover</a>
+                        <h3>Onyx Marble</h3>
+                        <p>Exotic translucent marble with vibrant hues and a glowing effect.</p>
+                        <a href="login.php" class="quote-btn">Discover</a>
                     </div>
                 </div>
             </div>
+            
+            
 
         </div>
         <div class="text-center mt-4">
-            <a href="collection.html" class="explore-btn">Explore Collection</a>
+            <a href="collection.php" class="explore-btn">Explore Collection</a>
         </div>
 
         </div>

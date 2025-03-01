@@ -11,3 +11,16 @@ marble_business
 6️⃣ feedback → Stores customer reviews & ratings
 7️⃣ contact_messages → Stores customer inquiries
 8️⃣ admins → Stores separate admin accounts like staff manager owner or any other
+
+
+Change the images and the content of all pages
+
+navbar close icon on  mobile screen and function's
+
+Pendings- 
+Home-page Guest view
+1. send message
+2. Ceo image and detail's
+3.logics after login same page redirection.
+4.contact us with backend and show up on admin panel
+

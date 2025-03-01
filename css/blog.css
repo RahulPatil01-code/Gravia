@@ -1,0 +1,570 @@
+h1, h2, h3, .highlight {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+body, p, a, li {
+    font-family: 'Lora', serif;  /* Option 1 */
+    /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
+}
+
+/* Ensures that body and html have no margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* /* Navbar Styling */
+    .navbar {
+        /* position: absolute; Overlay on hero image */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.5); /* Dark transparent effect */
+        padding: 10px 30px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: black !important;
+        font-family: 'Cinzel', serif;
+    } 
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding-bottom: 0px; /* Space for animation */
+}
+
+.login-avatar {
+    width: 40px;  /* Adjust size */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-avatar:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+.nav-link::after,
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%) translateY(5px); /* Start below */
+    opacity: 0; /* Initially hidden */
+}
+
+.nav-link::after {
+    width: 70%; /* Full-width underline */
+    bottom: -5px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.nav-link::before {
+    width: 50%; /* Smaller underline */
+    bottom: -10px;
+    transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s; 
+    /* 0.2s delay to appear AFTER the first line */
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0s; /* No delay on first line */
+}
+
+.nav-link:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0.2s; /* Appears after first line */
+}
+
+.nav-link:not(:hover)::before {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+    transition-delay: 0s; /* Disappear first */
+}
+
+.nav-link:not(:hover)::after {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+    transition-delay: 0.2s; /* Disappear after second line */
+}
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust the width */
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb (Draggable Part) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Dark grey */
+    border-radius: 10px;
+}
+
+/* Scrollbar on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker grey */
+}
+
+
+
+        /* Blog Hero Section */
+        .blog-hero {
+            height: 60vh;
+            overflow: hidden;
+        }
+        
+        .hero-img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem !important;
+            margin-bottom: 10px;
+        }
+        
+        .custom-heading{
+            font-size: 3rem;
+        }
+        /* Blog Categories */
+        .category-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .category-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .category-box img {
+            max-width: 60px;
+            margin-bottom: 10px;
+        }
+        
+        .category-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        /* Blog Cards */
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-date {
+            color: #888;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .blog-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+ /* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers it properly */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Blog Modal Styling */
+.blog-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Ensure it appears above everything */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Blog Modal Content */
+.blog-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Adjust width as needed */
+    max-width: 600px; /* Prevent it from being too wide */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Close Button */
+.blog-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+        .btn-outline-warning {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff5722;  /* Vibrant color */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: none; /* Remove outline effect */
+        }
+        
+        /* Hover Effect */
+        .btn-outline-warning:hover {
+            background: #e64a19; /* Slightly darker */
+            transform: scale(1.05);
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .btn-outline-warning {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        
+
+        .read-more {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        
+        .read-more:hover {
+            color: #e0a800;
+        }
+        
+        /* Subscribe Section */
+        .subscribe-section {
+            background-color: #f8f9fa;
+        }
+
+        .btn-warning {
+            background: #ff5722 !important;  /* Vibrant color */
+            color: white !important;  /* Keeps text white */
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: none; /* Removes Bootstrap outline */
+        }
+        
+        /* Hover Effect */
+        .btn-warning:hover {
+            background: #e64a19 !important; /* Slightly darker */
+            transform: scale(1.05);
+            color: white !important; /* Ensures text remains white */
+        }
+        
+        #categoryModal img {
+            width: 100%; /* Responsive to modal width */
+            max-width: 300px; /* Set a maximum width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Removes extra space */
+            margin: 15px auto; /* Center the image */
+            border-radius: 8px; /* Optional: Smooth edges */
+        }   
+
+        /* Modal Image Styling */
+#articleImage {
+    width: 100%; /* Full width of the modal */
+    max-height: 300px; /* Limit height for better readability */
+    object-fit: cover; /* Ensures the image scales nicely without distortion */
+    border-radius: 10px; /* Adds smooth rounded corners */
+    display: block; /* Removes extra spacing */
+    margin: 10px auto; /* Centers the image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better contrast */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #articleImage {
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #articleImage {
+        max-height: 250px; /* Further reduce height for mobile screens */
+        border-radius: 5px; /* Slightly smaller border radius */
+    }
+}
+
+        
+        
+        /* Like Button and Bookmark */
+        .blog-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .action-btn i {
+            margin-right: 5px;
+        }
+        
+        .action-btn:hover {
+            color: #ffc107;
+        }
+        
+        .action-btn.active {
+            color: #ffc107;
+        }
+        
+        /* Tags */
+        .blog-tags {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            font-size: 12px;
+            background-color: #f0f0f0;
+            color: #666;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        
+        .blog-tag:hover {
+            background-color: #ffc107;
+            color: #fff;
+        }
+        
+        /* Modal styles */
+        .modal-content {
+            border-radius: 10px;
+        }
+        
+        /* Dark mode toggle */
+        .dark-mode {
+            background-color: #222;
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .blog-card, 
+        .dark-mode .category-box {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .bg-light {
+            background-color: #222 !important;
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .navbar {
+            background-color: #333 !important;
+        }
+        
+        .dark-mode .navbar-brand,
+        .dark-mode .nav-link {
+            color: #f0f0f0;
+        }
+        
+        /* Search box */
+        .search-container {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 10px 45px 10px 15px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #ffc107;
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+        }
+        
+        /* Comment section */
+        .comment-form {
+            margin-top: 30px;
+        }
+        
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffc107;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comment-content {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravia Home</title>
+    <title>Gravia Home | Elevate Your Space</title>
 
     <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,6 +14,12 @@
     <!-- AOS Animations & Swiper -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- SweetAlert2 CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,13 +36,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Inspiration's</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-
-
+                    
                 </ul>
             </div>
         </div>
@@ -49,7 +54,7 @@
         <div class="hero-overlay">
             <h1 data-aos="fade-up" class="display-3 fw-bold">Let's Make Your Vision a Reality</h1>
             <p data-aos="fade-up" data-aos-delay="200" class="fs-4">Custom-made marble solutions designed for your needs.</p>
-            <a href="contact.html" class="custom-button" data-aos="fade-up" data-aos-delay="400">Get In Touch</a>
+            <a href="contact.php" class="custom-button" data-aos="fade-up" data-aos-delay="400">Get In Touch</a>
         </div>
     </section>
 
@@ -57,7 +62,7 @@
         <div class="row align-items-center">
             <!-- Left Side: Image -->
             <div class="col-lg-6 position-relative">
-                <img src="./src/italian.jpg" alt="Marble Flooring" class="img-fluid rounded">
+                <img src="./src/Marble-Herringbone-Pattern.jpg" alt="Marble Flooring" class="img-fluid rounded">
             </div>
             
             <!-- Right Side: Text Content with Overlapping Effect -->
@@ -122,15 +127,38 @@
             <p>
                 We understand that the kitchen is the heart of the home, and it should be designed to reflect your individual style and lay out a space for fulfilling your culinary passions.
             </p>
-            <a href="#" class="btn btn-warning px-4 py-2">Read More</a>
+            <a href="#" class="btn btn-warning px-4 py-2" onclick="openReadMoreModal(event)">Read More</a>
         </div>
-
+        
         <!-- Right Side: Image -->
         <div class="col-lg-6">
-            <img src="./src/italian.jpg" alt="Marble Kitchen" class="img-fluid rounded" loading="lazy">
+            <img src="./src/kitchen.jpg" alt="Marble Kitchen" class="img-fluid rounded" loading="lazy">
         </div>
     </div>
-</section>
+    </section>
+
+                        <!-- Read More Modal -->
+                    <div id="readMoreModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeReadMoreModal()">&times;</span>
+                            <h2>Your Dream Kitchen Awaits</h2>
+                            <img src="./src/dream-kitchen.jpg" alt="Marble Kitchen" class="modal-image">
+                            <p>
+                                Your kitchen is more than just a cooking space—it's where memories are made.  
+                                Whether you love sleek **modern designs** or the warmth of **traditional aesthetics**,  
+                                we craft kitchens that combine **luxury, comfort, and functionality**.  
+                                <br><br>
+                                🌱 <span class="highlight">Eco-Friendly Materials</span> – Sustainable, durable, and stylish.  <br>
+                                🏡 <span class="highlight">Custom Creations</span> – Designed to fit your unique lifestyle. <br> 
+                                🔥 <span class="highlight">Timeless Elegance</span> – Premium materials that elevate your space.  
+                            </p>
+                            
+                        </div>
+                    </div>
+
+
+
+
 
         <!-- Gallery section -->
     <section id="gallery" class="gallery py-5 text-center bg-white">
@@ -139,89 +167,97 @@
             <div class="row">
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Carrara Marble</h3>
+                            <p>Iconic Italian marble with soft gray veins, perfect for luxury interiors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/GREY-EMPERADOR.jpg" alt="Nero Marquina" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Nero Marquina</h3>
+                            <p>Deep black marble with striking white veins, a bold and elegant choice.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/verde-alpi.jpg" alt="Verde Alpi" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Verde Alpi</h3>
+                            <p>Rich green marble with natural patterns, bringing nature indoors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/CALACATTA_GOLD_A.jpg" alt="Calacatta Gold" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Calacatta Gold</h3>
+                            <p>Luxurious white marble with golden veins, a symbol of opulence.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/STATUARIO-VENATINO.jpg" alt="Statuario Marble" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Statuario Marble</h3>
+                            <p>Premium white marble with bold veining, ideal for statement designs.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/GREY-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Emperador </h3>
+                            <p>Rich brown marble with white veining, perfect for warm interiors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/Azul_Macaubas.jpeg" alt="Azul Macaubas" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Azul Macaubas</h3>
+                            <p>Exotic blue quartzite marble, adding a cool and unique touch.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
                     <div class="card">
-                        <img src="https://source.unsplash.com/400x400/?marble,texture" alt="Marble 2" class="img-fluid">
+                        <img src="./src/levanto_red.jpg" alt="Rosso Levanto" class="img-fluid">
                         <div class="card-content">
-                            <h3>Classic White</h3>
-                            <p>Timeless white marble with natural veins.</p>
-                            <a href="index.html" class="quote-btn">Get a Quote</a>
+                            <h3>Rosso Levanto</h3>
+                            <p>Deep red marble with white veins, adding drama and sophistication.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
                         </div>
                     </div>
                 </div>
+                
+                
 
             </div>
             <div class="text-center mt-4">
-                <a href="explore.php" class="explore-btn">Explore Collection</a>
+                <a href="explore.php" class="explore-btn">Experience the Elegance</a>
             </div>
 
             
@@ -264,16 +300,66 @@
     <!-- Projects Section -->
     <section class="py-5 text-center text-white bg-dark">
         <div class="container">
-            <h2 data-aos="fade-up" class="mb-4">Our Projects</h2>
+            <h2 data-aos="fade-up" class="mb-4" class="project-headding">Our Projects</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
+                Explore our <span class="highlight">Exceptional flooring projects</span>, designed to bring <span class="highlight">elegance</span>and<span class="highlight"> durability</span> to every space.  
+                From<span class="highlight"> luxurious interiors</span> to modern commercial areas, we redefine <span class="highlight">craftsmanship</span> with innovation.
+            </p>
+            
+            
+    
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?marble" class="img-fluid rounded shadow"></div>
-                    <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?architecture" class="img-fluid rounded shadow"></div>
-                    <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?interior-design" class="img-fluid rounded shadow"></div>
+                    <div class="swiper-slide">
+                        <img src="./src/commercial.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Commercial Spaces</h4>
+                            <p>Durable & elegant flooring solutions for modern business environments.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./src/architectural.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Architectural Marvels</h4>
+                            <p>Blending luxury with structural excellence in every detail.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./src/Interior.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Interior Designs</h4>
+                            <p>Stylish, high-quality flooring that enhances every space.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <img src="./src/outdoor.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Outdoor Landscaping</h4>
+                            <p>Premium stone flooring for beautiful and lasting outdoor spaces.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./src/hotel-lobby.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Hotel Lobbies</h4>
+                            <p>Grand, polished floors that leave a lasting impression.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./src/Kitchens.jpg" class="img-fluid rounded shadow">
+                        <div class="project-info">
+                            <h4>Modern Kitchens</h4>
+                            <p>Elegant and easy-to-maintain flooring for contemporary kitchens.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
 
     <!-- Team section -->
