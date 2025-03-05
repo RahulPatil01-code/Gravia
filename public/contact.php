@@ -20,13 +20,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
 
@@ -34,17 +32,17 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="Index.php">Gravia</a>
+            <a class="navbar-brand fw-bold" href="../Index.php">Gravia</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog's</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./explore.php">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.php">Blog's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./About.php">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./login.php">Login</a></li>
                     
                 </ul>
             </div>
@@ -113,38 +111,39 @@
     
 
       <!-- Footer -->
-    <footer class="custom-footer">
+      <footer class="custom-footer">
     <div class="container">
         <div class="row">
+            <!-- Branding and Social Links -->
+            <div class="col-md-3 footer-brand">
+                <a class="navbar-brand fw-bold" href="../Index.php">Gravia</a>
+                <div class="social-links mt-2">
+                    <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
             <!-- Navigation Links -->
             <div class="col-md-4 footer-column">
                 <div class="row">
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="Index.php" class="footer-link">Home</a></li>
-                        <li><a href="explore.php" class="footer-link">Products</a></li>
-                        <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="about.php" class="footer-link">About Us</a></li>
-                        <li><a href="contact.php" class="footer-link">Contact</a></li>
-                        <li><a href="" class="footer-link">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="../Index.php" class="footer-link">Home</a></li>
+                            <li><a href="./explore.php" class="footer-link">Products</a></li>
+                            <li><a href="../index.php#Project-section" class="footer-link">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="./about.php" class="footer-link">About Us</a></li>
+                            <li><a href="./contact.php" class="footer-link">Contact</a></li>
+                            <li><a href="" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Social Links -->
-            <div class="col-md-3 col-12 text-center text-md-start social-links">
-                <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
-            </div>
-
 
             <!-- Newsletter Subscription -->
             <div class="col-md-5 col-12 newsletter">
@@ -166,7 +165,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="./js/explore.js"></script> -->
 
 </body>
 </html>

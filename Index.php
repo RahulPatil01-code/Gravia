@@ -25,7 +25,7 @@
 
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -39,11 +39,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog's</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./public/explore.php">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./public/blog.php">Blog's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./public/About.php">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./public/contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./public/login.php">Login</a></li>
                     
                 </ul>
             </div>
@@ -57,7 +57,7 @@
         <div class="hero-overlay">
             <h1 data-aos="fade-up" class="display-3 fw-bold">Let's Make Your Vision a Reality</h1>
             <p data-aos="fade-up" data-aos-delay="200" class="fs-4">Custom-made marble solutions designed for your needs.</p>
-            <a href="contact.php" class="custom-button" data-aos="fade-up" data-aos-delay="400">Get In Touch</a>
+            <a href="./public/contact.php" class="custom-button" data-aos="fade-up" data-aos-delay="400">Get In Touch</a>
         </div>
     </section>
 
@@ -260,7 +260,7 @@
 
             </div>
             <div class="text-center mt-4">
-                <a href="explore.php" class="explore-btn">Experience the Elegance</a>
+                <a href="./public/explore.php" class="explore-btn">Experience the Elegance</a>
             </div>
 
             
@@ -549,35 +549,36 @@
     <footer class="custom-footer">
     <div class="container">
         <div class="row">
+            <!-- Branding and Social Links -->
+            <div class="col-md-3 footer-brand">
+                <a class="navbar-brand fw-bold" href="Index.php">Gravia</a>
+                <div class="social-links mt-2">
+                    <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
             <!-- Navigation Links -->
             <div class="col-md-4 footer-column">
                 <div class="row">
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="Index.php" class="footer-link">Home</a></li>
-                        <li><a href="explore.php" class="footer-link">Products</a></li>
-                        <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="about.php" class="footer-link">About Us</a></li>
-                        <li><a href="contact.php" class="footer-link">Contact</a></li>
-                        <li><a href="" class="footer-link">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="./Index.php" class="footer-link">Home</a></li>
+                            <li><a href="./public/explore.php" class="footer-link">Products</a></li>
+                            <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="./public/about.php" class="footer-link">About Us</a></li>
+                            <li><a href="./public/contact.php" class="footer-link">Contact</a></li>
+                            <li><a href="" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Social Links -->
-            <div class="col-md-3 col-12 text-center text-md-start social-links">
-                <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
-            </div>
-
 
             <!-- Newsletter Subscription -->
             <div class="col-md-5 col-12 newsletter">
@@ -594,6 +595,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
     <!-- Scripts -->

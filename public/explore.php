@@ -21,13 +21,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/explore.css">
+    <link rel="stylesheet" href="../css/explore.css">
 </head>
 <body>
 
@@ -35,17 +34,17 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="Index.php">Gravia</a>
+            <a class="navbar-brand fw-bold" href="../Index.php">Gravia</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="explore.php">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog's</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About.php">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./explore.php">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.php">Blog's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./About.php">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./login">Login</a></li>
                     
                 </ul>
             </div>
@@ -81,7 +80,7 @@
             
             <a href="#" class="btn btn-warning px-4 py-2 read-more-link" 
                 data-title="Carrara Marble - Elegance Redefined" 
-                data-image="src/BIANCO-CARRARA.jpg"
+                data-image="../src/BIANCO-CARRARA.jpg"
                 data-text="Carrara Marble has been quarried since Roman times and has been used in some of the most iconic sculptures and architecture. Michelangelo’s famous statue of David was carved from a single block of Carrara Marble. Known for its durability and smooth texture, it is perfect for sculptures, flooring, countertops, and walls. The subtle gray veining varies in intensity, giving each slab a unique character. Used in high-end residential and commercial interiors, it remains one of the most sought-after marbles in the world.">
                 Read More 
             </a>
@@ -89,7 +88,7 @@
 
         <!-- Right Side: Image -->
         <div class="col-lg-6">
-            <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid rounded" loading="lazy">
+            <img src="../src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid rounded" loading="lazy">
         </div>
     </div>
 </section>
@@ -111,7 +110,7 @@
     <div class="row align-items-center">
         <!-- Right Side: Image -->
         <div class="col-lg-6">
-            <img src="./src/CALACATTA-TORO.jpg" alt="Calacatta Marble" class="img-fluid rounded" loading="lazy">
+            <img src="../src/CALACATTA-TORO.jpg" alt="Calacatta Marble" class="img-fluid rounded" loading="lazy">
         </div>
 
         <!-- Left Side: Text Content -->
@@ -128,7 +127,7 @@
             </p>
                 <a href="#"  class="btn btn-warning px-4 py-2 read-more-link" 
                 data-title="Calacatta Marble - Luxury Beyond Compare" 
-                data-image="src/CALACATTA-TORO.jpg"
+                data-image="../src/CALACATTA-TORO.jpg"
                 data-text="Calacatta Marble is a rare and luxurious stone with bold, high-contrast veining. Found in the same region as Carrara Marble, it features a whiter background with striking gray and gold veins. Unlike Carrara, Calacatta is rarer and often considered a premium choice for extravagant interiors. It is widely used in grand foyers, high-end countertops, feature walls, and flooring. Due to its distinctive patterns, no two slabs are alike, making it a unique and sought-after material for sophisticated spaces.">
                 Read More 
             </a>
@@ -154,7 +153,7 @@
             <a href="#" 
                class="btn btn-warning px-4 py-2 read-more-link" 
                data-title="Warmth of Emperador Marble" 
-               data-image="./src/COFFEE-EMPERADOR.jpg"
+               data-image="../src/COFFEE-EMPERADOR.jpg"
                data-text="Emperador Marble is a stunning natural stone sourced from Spain, featuring a deep brown base with interwoven white and golden veins. It is highly valued for its rich, warm tones that add sophistication to any space. Unlike white marbles, Emperador offers a more dramatic and earthy aesthetic, making it ideal for traditional and contemporary interiors. It is commonly used in luxurious bathroom vanities, fireplace surrounds, flooring, and wall cladding. The natural variations in pattern and color make every Emperador Marble installation unique."
               >Read More
             </a>
@@ -162,7 +161,7 @@
 
         <!-- Right Side: Image -->
         <div class="col-lg-6">
-            <img src="./src/COFFEE-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid rounded" loading="lazy">
+            <img src="../src/COFFEE-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid rounded" loading="lazy">
         </div>
     </div>
 </section>
@@ -175,7 +174,7 @@
     
             <div class="col-md-3">
                 <div class="card">
-                    <img src="./src/Nero-Marquina-Marble.jpeg" alt="Nero Marquina Marble" class="img-fluid">
+                    <img src="../src/Nero-Marquina-Marble.jpeg" alt="Nero Marquina Marble" class="img-fluid">
                     <div class="card-content">
                         <h3>Nero Marquina</h3>
                         <p>Deep black marble with bold white veins, exuding elegance and luxury.</p>
@@ -186,7 +185,7 @@
             
             <div class="col-md-3">
                 <div class="card">
-                    <img src="./src/CREMA-MARFIL.jpg" alt="Crema Marfil Marble" class="img-fluid">
+                    <img src="../src/CREMA-MARFIL.jpg" alt="Crema Marfil Marble" class="img-fluid">
                     <div class="card-content">
                         <h3>Crema Marfil</h3>
                         <p>Warm beige marble with fine veins, perfect for classic interiors.</p>
@@ -197,7 +196,7 @@
             
             <div class="col-md-3">
                 <div class="card">
-                    <img src="./src/Tropical-Rainforest-Green.jpg" alt="Rainforest Marble" class="img-fluid">
+                    <img src="../src/Tropical-Rainforest-Green.jpg" alt="Rainforest Marble" class="img-fluid">
                     <div class="card-content">
                         <h3>Rainforest</h3>
                         <p>Striking green or brown marble with bold, nature-inspired veining.</p>
@@ -208,7 +207,7 @@
             
             <div class="col-md-3">
                 <div class="card">
-                    <img src="./src/ONYX-(-GOLDEN-BROWN-).jpg" alt="Onyx Marble" class="img-fluid">
+                    <img src="../src/ONYX-(-GOLDEN-BROWN-).jpg" alt="Onyx Marble" class="img-fluid">
                     <div class="card-content">
                         <h3>Onyx Marble</h3>
                         <p>Exotic translucent marble with vibrant hues and a glowing effect.</p>
@@ -231,43 +230,43 @@
       <section class="text-center py-5 bg-white">
         <h2 class="fw-bold">Need Help Choosing the Perfect Marble?</h2>
         <p class="text-muted">Our experts are here to guide you. Contact us to find the ideal marble for your project.</p>
-        <a href="contact.php" class="btn btn-dark mt-3">Get in Touch</a>
+        <a href="./contact.php" class="btn btn-dark mt-3">Get in Touch</a>
     </section>
     
-    <!-- Footer -->
     <!-- Footer -->
     <footer class="custom-footer">
     <div class="container">
         <div class="row">
+            <!-- Branding and Social Links -->
+            <div class="col-md-3 footer-brand">
+                <a class="navbar-brand fw-bold" href="../Index.php">Gravia</a>
+                <div class="social-links mt-2">
+                    <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
             <!-- Navigation Links -->
             <div class="col-md-4 footer-column">
                 <div class="row">
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="Index.php" class="footer-link">Home</a></li>
-                        <li><a href="explore.php" class="footer-link">Products</a></li>
-                        <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li><a href="about.php" class="footer-link">About Us</a></li>
-                        <li><a href="contact.php" class="footer-link">Contact</a></li>
-                        <li><a href="" class="footer-link">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="../Index.php" class="footer-link">Home</a></li>
+                            <li><a href="./explore.php" class="footer-link">Products</a></li>
+                            <li><a href="../index.php#Project-section" class="footer-link">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="./about.php" class="footer-link">About Us</a></li>
+                            <li><a href="./contact.php" class="footer-link">Contact</a></li>
+                            <li><a href="" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Social Links -->
-            <div class="col-md-3 col-12 text-center text-md-start social-links">
-                <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
-            </div>
-
 
             <!-- Newsletter Subscription -->
             <div class="col-md-5 col-12 newsletter">
@@ -285,11 +284,12 @@
     </div>
 </footer>
 
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/explore.js"></script>
+    <script src="../js/explore.js"></script>
 
 </body>
 </html>
