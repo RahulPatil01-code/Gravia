@@ -166,8 +166,53 @@
 
 
   <!-- Footer -->
-  <footer class="text-center bg-black text-white py-3 mt-10">
-    <p>&copy; 2025 Gravia. All rights reserved.</p>
+  <footer class="custom-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Navigation Links -->
+            <div class="col-md-4 footer-column">
+                <div class="row">
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li><a href="Index.php" class="footer-link">Home</a></li>
+                        <li><a href="explore.php" class="footer-link">Products</a></li>
+                        <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li><a href="about.php" class="footer-link">About Us</a></li>
+                        <li><a href="contact.php" class="footer-link">Contact</a></li>
+                        <li><a href="" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="col-md-3 col-12 text-center text-md-start social-links">
+                <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
+            </div>
+
+
+            <!-- Newsletter Subscription -->
+            <div class="col-md-5 col-12 newsletter">
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Your email address">
+                        <button class="btn newsletter-btn" type="submit">Subscribe</button>
+                    </div>
+                    <div class="newsletter-note text-center text-md-start">
+                        By subscribing to our newsletter you agree to our <a href="#">Privacy Policy</a>.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!-- Scripts -->

@@ -553,3 +553,50 @@ p {
 }
 
 
+
+/* Footer */
+
+.custom-footer {
+    background-color: white;
+    padding: 40px 0;
+}
+
+
+.custom-footer {
+    background-color: white;
+    padding: 40px 0;
+}
+.footer-link {
+    color: black;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+.newsletter-input {
+    border: 1px solid black;
+    border-radius: 0;
+}
+.newsletter-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+}
+.newsletter-note {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #6c757d;
+}
+@media (max-width: 768px) {
+    .footer-column {
+        margin-bottom: 20px;
+    }
+    .social-links {
+        margin-bottom: 20px;
+    }
+}
+
+

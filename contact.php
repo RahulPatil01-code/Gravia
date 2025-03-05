@@ -6,7 +6,8 @@
     <title>Get in Touch | Gravia Home Support & Inquiries</title>
 
     <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +20,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 
 
     <!-- Custom CSS -->
@@ -110,9 +113,54 @@
     
 
       <!-- Footer -->
-      <footer class="text-center bg-black text-white py-3 mt-10">
-        <p>&copy; 2025 Gravia. All rights reserved.</p>
-    </footer>
+    <footer class="custom-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Navigation Links -->
+            <div class="col-md-4 footer-column">
+                <div class="row">
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li><a href="Index.php" class="footer-link">Home</a></li>
+                        <li><a href="explore.php" class="footer-link">Products</a></li>
+                        <li><a href="index.php#Project-section" class="footer-link">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li><a href="about.php" class="footer-link">About Us</a></li>
+                        <li><a href="contact.php" class="footer-link">Contact</a></li>
+                        <li><a href="" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="col-md-3 col-12 text-center text-md-start social-links">
+                <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-link me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="footer-link me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-pinterest"></i></a>
+            </div>
+
+
+            <!-- Newsletter Subscription -->
+            <div class="col-md-5 col-12 newsletter">
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Your email address">
+                        <button class="btn newsletter-btn" type="submit">Subscribe</button>
+                    </div>
+                    <div class="newsletter-note text-center text-md-start">
+                        By subscribing to our newsletter you agree to our <a href="#">Privacy Policy</a>.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
