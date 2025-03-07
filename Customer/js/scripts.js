@@ -5,27 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const slides = [
     { 
-        img: "../src/explore-1.jpg",  
+        img: "./src/hero-1.jpg",  
         title: "Unveiling Luxury in Every Vein", 
         text: "Experience the perfect blend of elegance and durability with our premium marble collections."
     },
     { 
-        img: "../src/explore-1.jpg", 
+        img: "./src/hero-2.jpg", 
         title: "Timeless Beauty, Modern Craftsmanship", 
         text: "Designed to redefine sophistication, our marble surfaces bring nature’s artistry into your space."
     },
     { 
-        img: "../src/explore-2.jpg", 
+        img: "./src/hero-3.jpg", 
         title: "Beyond Aesthetic, Pure Excellence", 
         text: "Discover marble that transforms interiors into masterpieces, crafted for those who seek perfection."
     },
     { 
-        img: "../src/explore-3.jpg", 
+        img: "./src/hero-4.jpg", 
         title: "Where Elegance Meets Strength", 
         text: "Our handpicked marble collections are more than just stones; they’re stories carved in nature’s perfection."
     },
     { 
-        img: "../src/explore-4.jpg", 
+        img: "./src/hero-5.jpg", 
         title: "Sculpting Dreams, One Slab at a Time", 
         text: "Create an iconic space with our world-class marble, designed to inspire generations."
     }

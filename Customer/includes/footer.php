@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-unstyled">
-                            <li><a href="Index.html" class="footer-link">Home</a></li>
+                            <li><a href="Index.php" class="footer-link">Home</a></li>
                             <li><a href="explore.html" class="footer-link">Products</a></li>
                             <li><a href="index.html#Project-section" class="footer-link">Projects</a></li>
                         </ul>

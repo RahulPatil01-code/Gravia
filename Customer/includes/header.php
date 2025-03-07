@@ -27,7 +27,7 @@
 </head>
 <body>
     <nav class="top-navbar container-fluid px-md-5 px-3">
-        <a class="navbar-brand fw-bold" href="../Index.html">Gravia</a>
+        <a class="navbar-brand fw-bold" href="/Gravia/customer/Index.php">Gravia</a>
         
         <div class="search-bar">
             <input type="text" class="form-control" placeholder="Search...">
@@ -68,11 +68,11 @@
                 <h6 class="mobile-nav-group-title">Marble Types</h6>
                 <ul class="mobile-nav-links">
                     <li>
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#italianMarble">
+                        <a href="../public/catalog.php" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#italianMarble">
                             Italian Marble
                         </a>
                         <ul id="italianMarble" class="collapse">
-                            <li><a href="#">Statuario</a></li>
+                            <li><a href="../public/catalog.php">Statuario</a></li>
                             <li><a href="#">Carrara</a></li>
                             <li><a href="#">Calacatta</a></li>
                             <li><a href="#">Botticino</a></li>
@@ -161,7 +161,7 @@
         <div class="container d-flex justify-content-center">
             <ul class="nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button">Italian Marble</a>
+                    <a class="nav-link dropdown-toggle" href="./public/catalog.php" role="button">Italian Marble</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Statuario</a></li>
                         <li><a class="dropdown-item" href="#">Carrara</a></li>

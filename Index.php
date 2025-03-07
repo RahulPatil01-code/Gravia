@@ -181,7 +181,7 @@
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card">
-                        <img src="./src/GREY-EMPERADOR.jpg" alt="Nero Marquina" class="img-fluid">
+                        <img src="./src/Nero-Marquina-Marble.jpeg" alt="Nero Marquina" class="img-fluid">
                         <div class="card-content">
                             <h3>Nero Marquina</h3>
                             <p>Deep black marble with striking white veins, a bold and elegant choice.</p>
@@ -207,14 +207,14 @@
                         <div class="card-content">
                             <h3>Calacatta Gold</h3>
                             <p>Luxurious white marble with golden veins, a symbol of opulence.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="card">
-                        <img src="./src/STATUARIO-VENATINO.jpg" alt="Statuario Marble" class="img-fluid">
+                        <img src="./src/crystal-statuario-marble.jpeg" alt="Statuario Marble" class="img-fluid">
                         <div class="card-content">
                             <h3>Statuario Marble</h3>
                             <p>Premium white marble with bold veining, ideal for statement designs.</p>

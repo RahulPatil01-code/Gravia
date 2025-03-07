@@ -48,9 +48,10 @@
     <div class="container">
         <h2 class="text-center mb-4 fw-bold">Shop by Category</h2>
         <div class="row">
-            <div class="col-md-4">
+            <!-- Mobile view (stacked) -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
                 <div class="card category-card">
-                    <img src="images/marble.jpg" class="card-img-top" alt="Marble">
+                    <img src="./src/marble.jpg" class="card-img-top" alt="Marble">
                     <div class="card-body text-center">
                         <h3>Elegant Stone</h3>
                         <p>Elegant and durable natural stone for flooring and decor.</p>
@@ -59,9 +60,9 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
                 <div class="card category-card">
-                    <img src="images/granite.jpg" class="card-img-top" alt="Granite">
+                    <img src="./src/granite.jpg" class="card-img-top" alt="Granite">
                     <div class="card-body text-center">
                         <h3>Timeless Strength</h3>
                         <p>Strong and stylish granite for long-lasting surfaces.</p>
@@ -70,9 +71,9 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
                 <div class="card category-card">
-                    <img src="images/tiles.jpg" class="card-img-top" alt="Tiles">
+                    <img src="./src/tiles.jpg" class="card-img-top" alt="Tiles">
                     <div class="card-body text-center">
                         <h3>Stylish Surfaces</h3>
                         <p>Modern and stylish tiles for elegant interiors.</p>
@@ -99,7 +100,7 @@
                         <div class="card-body text-center">
                             <h3>Marble A</h3>
                             <p>$100 per sq.ft</p>
-                            <a href="#" class="btn btn-success">Buy Now</a>
+                            <a href="#" class="btn btn-success">View detail's</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
                         <div class="card-body text-center">
                             <h3>Marble B</h3>
                             <p>$120 per sq.ft</p>
-                            <a href="#" class="btn btn-success">Buy Now</a>
+                            <a href="#" class="btn btn-success">View detail's</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +126,7 @@
                         <div class="card-body text-center">
                             <h3>Marble C</h3>
                             <p>$150 per sq.ft</p>
-                            <a href="#" class="btn btn-success">Buy Now</a>
+                            <a href="#" class="btn btn-success">View detail's</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +139,7 @@
                         <div class="card-body text-center">
                             <h3>Marble D</h3>
                             <p>$180 per sq.ft</p>
-                            <a href="#" class="btn btn-success">Buy Now</a>
+                            <a href="#" class="btn btn-success">View detail's</a>
                         </div>
                     </div>
                 </div>
@@ -156,92 +157,116 @@
         <!-- Gallery section -->
         <section id="gallery" class="gallery py-5 text-center bg-white">
         <div class="container">
-            <h2 data-aos="fade-up" class="mb-4">Our Exquisite Collection</h2>
+            <h2 data-aos="fade-up" class="mb-4">A Symphony of Marble</h2>
             <div class="row">
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid">
                         <div class="card-content">
                             <h3>Carrara Marble</h3>
                             <p>Iconic Italian marble with soft gray veins, perfect for luxury interiors.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/GREY-EMPERADOR.jpg" alt="Nero Marquina" class="img-fluid">
                         <div class="card-content">
                             <h3>Nero Marquina</h3>
                             <p>Deep black marble with striking white veins, a bold and elegant choice.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/verde-alpi.jpg" alt="Verde Alpi" class="img-fluid">
                         <div class="card-content">
                             <h3>Verde Alpi</h3>
                             <p>Rich green marble with natural patterns, bringing nature indoors.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/CALACATTA_GOLD_A.jpg" alt="Calacatta Gold" class="img-fluid">
                         <div class="card-content">
                             <h3>Calacatta Gold</h3>
                             <p>Luxurious white marble with golden veins, a symbol of opulence.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/STATUARIO-VENATINO.jpg" alt="Statuario Marble" class="img-fluid">
                         <div class="card-content">
                             <h3>Statuario Marble</h3>
                             <p>Premium white marble with bold veining, ideal for statement designs.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/GREY-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid">
                         <div class="card-content">
                             <h3>Emperador </h3>
                             <p>Rich brown marble with white veining, perfect for warm interiors.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/Azul_Macaubas.jpeg" alt="Azul Macaubas" class="img-fluid">
                         <div class="card-content">
                             <h3>Azul Macaubas</h3>
                             <p>Exotic blue quartzite marble, adding a cool and unique touch.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
                     <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
                         <img src="./src/levanto_red.jpg" alt="Rosso Levanto" class="img-fluid">
                         <div class="card-content">
                             <h3>Rosso Levanto</h3>
                             <p>Deep red marble with white veins, adding drama and sophistication.</p>
-                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                            <a href="login.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
@@ -250,7 +275,7 @@
 
             </div>
             <div class="text-center mt-4">
-                <a href="./public/explore.php" class="explore-btn">Experience the Elegance</a>
+                <a href="./public/explore.php" class="explore-btn">Load more products</a>
             </div>
 
             

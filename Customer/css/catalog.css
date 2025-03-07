@@ -20,7 +20,7 @@ html, body {
     height: 70vh;
     background-size: cover;
     background-position: center;
-    background-image: url('../src/Main-home.jpg');  /* Default Image */
+    background-image: url('../src/catalog-hero.jpg');  /* Default Image */
     transition: background-image 1s ease-in-out; /* Smooth transition */
 }
 
@@ -95,6 +95,8 @@ html, body {
     }
 }
 
+
+/* Gallery/Products section  */
 
 
 /* colletion section */
@@ -228,37 +230,9 @@ html, body {
 
  /* Collection section close  */
 
+ /* Wishlist  */
 
  
- /* Explore Collection Button */
-.explore-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #ff5722;  /* Vibrant color */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Hover Effect */
-.explore-btn:hover {
-    background: #e64a19; /* Slightly darker */
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .explore-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
-
-
 /* Wishlist Button */
 .wishlist-icon {
     position: absolute;
@@ -343,258 +317,160 @@ html, body {
 }
 
 
-/* Trending products */
 
-/* General Card Styling */
-
-.card {
-    border: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
-    overflow: hidden;
+/* Sort Container Styles */
+.sort-container {
+    justify-content: end;
     display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensures uniform card height */
-}
+    align-items: center;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Sort Label */
+  .sort-container label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Sort Dropdown */
+  #sort {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    min-width: 180px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;  /* Remove default styling in Safari */
+    -moz-appearance: none;     /* Remove default styling in Firefox */
+    appearance: none;          /* Remove default dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 30px;
+  }
+  
+  #sort:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  #sort:hover {
+    border-color: #bbb;
+  }
+  
+  /* Custom dropdown options styling for modern browsers */
+  #sort option {
+    padding: 8px;
+    font-size: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .sort-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .sort-container label {
+      margin-bottom: 8px;
+    }
+    
+    #sort {
+      width: 100%;
+    }
+  }
 
-/* Hover Effect */
-.card:hover {
-    transform: translateY(-5px);
-}
 
-/* Image Styling */
-.card img {
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 100%; /* Ensures full width */
-}
-
-/* Card Body */
-.card-body {
-    flex-grow: 1; /* Ensures equal height distribution */
+ /* Pagination container */
+.pagination-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    background: #fff;
-    text-align: center;
-    height: 100%;
-}
-
-
-/* Buy Now Button */
-.btn-success {
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 1rem;
-}
-
-
-
-/* Responsive Grid */
-/* Tablet View (768px - 991px) - 3 cards per row */
-@media (max-width: 991px) {
-    .card {
-        width: 100%; /* Take full width inside the column */
-        max-width: 320px; /* Adjust card width */
-        margin: auto; /* Center the card */
-        height: auto;/* Keeps height flexible */
-    }
-
-   .container{
-    width: 32%;
-   }
-
-    .card img {
-        height: 180px; /* Adjusts image height */
-    }
-
-    .card-body {
-        padding: 15px;
-    }
-}
-
-
-/* Mobile View (Below 768px) */
-@media (max-width: 767px) {
-    .card {
-        width: 100%; /* Makes sure it fits in mobile screens */
-        height: auto; /* Auto height for flexibility */
-    }
-
-    .card img {
-        height: 160px; /* Adjusted image size */
-    }
-
-    .card-body {
-        padding: 10px;
-    }
-
-    .btn-success {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-    }
-}
-
-/* Small Mobile Screens (Below 480px) */
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-    }
-
-    .card img {
-        height: 140px;
-    }
-
-    .card-body {
-        padding: 8px;
-    }
-
-    .btn-success {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
-}
-
-
-
-/* Category section */
-
-.row{
-    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* Stretch cards to the same height */
-}
-
-.category-card {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    height: 100%;
-    width: 400px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  }
+  
+  /* Pagination items */
+  .pagination-item {
+    margin: 0 2px;
+  }
+  
+  /* Pagination links */
+  .pagination-link {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.category-card img {
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover;
-}
-
-.category-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.category-card .card-text {
-    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
     font-size: 14px;
-    color: #555;
-}
-
-.category-card .btn {
-    background-color: #ff5722;
-    border: none;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+  }
+  
+  /* Hover state */
+  .pagination-link:hover {
+    background-color: #f8f8f8;
+    border-color: #cccccc;
+  }
+  
+  /* Active state */
+  .pagination-link.active {
+    background-color: #1a1a1a;
     color: white;
-    padding: 10px 15px;
-    transition: background 0.3s ease-in-out;
-}
-
-.category-card .btn:hover {
-    background-color: #e64a19;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-}
-
-
-/* Tablet View (768px - 991px): 2 cards per row */
-@media (max-width: 991px) {
-    .category-card {
-        width: 100%; /* Take full width inside the column */
-        max-width: 320px; /* Adjust card width */
-        margin: auto; /* Center the card */
-        height: 500px;
+    border-color: black;
+    box-shadow: rgb(38, 38, 38)
+    ;
+  }
+  
+  /* Arrows */
+  .pagination-arrow {
+    font-weight: bold;
+  }
+  
+  /* Ellipsis */
+  .pagination-ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    color: #666666;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .pagination-container {
+      gap: 4px;
     }
     
-    .category-card img {
-        height: 180px; /* Adjust image height */
+    .pagination-link {
+      min-width: 36px;
+      height: 36px;
+      font-size: 13px;
     }
-}
-
-/* Mobile View (Below 768px): 1 card per row */
-@media (max-width: 768px) {
-    .category-card {
-        width: 100%; /* Full width */
-        max-width: 300px; /* Adjust for smaller screens */
-        margin: auto; /* Center the card */
+  }
+  
+  @media (max-width: 350px) {
+    .pagination-link {
+      min-width: 32px;
+      height: 32px;
+      padding: 0 5px;
     }
-    
-    .category-card img {
-        height: 160px; /* Adjust image height */
-    }
-
-    .category-card .card-body {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .category-card h3 {
-        font-size: 18px; /* Reduce title font size */
-    }
-
-    .category-card .card-text {
-        font-size: 13px; /* Adjust text size */
-    }
-
-    .category-card .btn {
-        padding: 8px 12px; /* Smaller button */
-        font-size: 14px;
-    }
-}
-
-
-
-
-/* Feeddback section */
-
-.testimonial-slider {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    height: 120px; /* Adjust height as needed */
-}
-
-
-.testimonial-box {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-box.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.testimonial-box.exit {
-    transform: translateX(-100%);
-    opacity: 0;
-}
+  }

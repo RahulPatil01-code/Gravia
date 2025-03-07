@@ -1,4 +1,3 @@
-After Feedback it should show on main page dynamically.
 
 marble_business
 
@@ -13,18 +12,27 @@ marble_business
 8️⃣ admins → Stores separate admin accounts like staff manager owner or any other
 
 
-Change the images and the content of all pages
-
 navbar close icon on  mobile screen and function's
 
 Pendings- 
-Home-page Guest view
+Guest view
 1. Contact us form submission 
 2. Ceo image and detail's
 3.logics after login same page redirection.
 4.contact us with backend and show up on admin panel.
 5. Subcribe to mail (Blog,Footer)
 
-workings :-
-1. font same size for all heading all page checking
+User side
+1. Wishlist logics
+2.footer design
+
+
+Planning to change the color of button have to discuss with her...
+
+This things will happen after building database
+Header:-
+1.navbar links
+2.search bar also ajax live search also search history.
+
+
 
