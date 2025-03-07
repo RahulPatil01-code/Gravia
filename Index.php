@@ -310,7 +310,7 @@
             </p>
             
             
-    
+            <!-- automatically sliding images -->
             <div class="swiper-container" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
