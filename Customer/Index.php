@@ -1,76 +1,297 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravia User Navbar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Gravia Home | Elevate Your Space</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animations & Swiper -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- SweetAlert2 CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        /* Custom Styles */
-        .top-nav {
-            background: #f8f9fa;
-            padding: 5px 0;
-            font-size: 14px;
-        }
-        .bottom-nav {
-            background: white;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .navbar-nav .nav-item:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
 </head>
 <body>
-    <!-- Top Navbar -->
-    <div class="top-nav d-flex justify-content-between px-4">
-        <div>
-            <a href="#" class="me-3">Locate a Store</a>
-            <a href="#">Customer Login</a>
-        </div>
-        <div>
-            <a href="#">Contact</a>
-        </div>
-    </div>
+
+<?php include './includes/header.php'; ?>
     
-    <!-- Main Navbar -->
-    <nav class="navbar navbar-expand-lg bottom-nav">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand fw-bold" href="#">GRAVIA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">Marble</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Italian Marble</a></li>
-                            <li><a class="dropdown-item" href="#">Granite</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Floor Tiles</a></li>
-                            <li><a class="dropdown-item" href="#">Wall Tiles</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">Design Ideas</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Modern Interiors</a></li>
-                            <li><a class="dropdown-item" href="#">Classic Designs</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
+    <section class="hero">
+    
+        <div class="hero-content">
+            <div class="hero-overlay"> <!-- Dark overlay for better text visibility -->
+            <h1 id="hero-title" >Welcome to Our Exclusive Collection</h1>
+            <p id="hero-text">Find the best marble products curated just for you.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Shop by Category</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <img src="images/marble.jpg" class="card-img-top" alt="Marble">
+                    <div class="card-body text-center">
+                        <h3>Elegant Stone</h3>
+                        <p>Elegant and durable natural stone for flooring and decor.</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <img src="images/granite.jpg" class="card-img-top" alt="Granite">
+                    <div class="card-body text-center">
+                        <h3>Timeless Strength</h3>
+                        <p>Strong and stylish granite for long-lasting surfaces.</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card category-card">
+                    <img src="images/tiles.jpg" class="card-img-top" alt="Tiles">
+                    <div class="card-body text-center">
+                        <h3>Stylish Surfaces</h3>
+                        <p>Modern and stylish tiles for elegant interiors.</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
+
+
+ <!-- Featured Products -->
+ <section class="featured-products bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Trending Products</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                        <img src="../src/italian.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h3>Marble A</h3>
+                            <p>$100 per sq.ft</p>
+                            <a href="#" class="btn btn-success">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                        <img src="images/product2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body text-center">
+                            <h3>Marble B</h3>
+                            <p>$120 per sq.ft</p>
+                            <a href="#" class="btn btn-success">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                        <img src="images/product3.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body text-center">
+                            <h3>Marble C</h3>
+                            <p>$150 per sq.ft</p>
+                            <a href="#" class="btn btn-success">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                        <img src="images/product4.jpg" class="card-img-top" alt="Product 4">
+                        <div class="card-body text-center">
+                            <h3>Marble D</h3>
+                            <p>$180 per sq.ft</p>
+                            <a href="#" class="btn btn-success">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Alert  -->
+    <div id="wishlist-toast" class="toast">
+        <span class="checkmark">✔</span> Added to your Wishlist
+    </div>
+
+
+
+        <!-- Gallery section -->
+        <section id="gallery" class="gallery py-5 text-center bg-white">
+        <div class="container">
+            <h2 data-aos="fade-up" class="mb-4">Our Exquisite Collection</h2>
+            <div class="row">
+                <div class="col-md-3" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Carrara Marble</h3>
+                            <p>Iconic Italian marble with soft gray veins, perfect for luxury interiors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card">
+                        <img src="./src/GREY-EMPERADOR.jpg" alt="Nero Marquina" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Nero Marquina</h3>
+                            <p>Deep black marble with striking white veins, a bold and elegant choice.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card">
+                        <img src="./src/verde-alpi.jpg" alt="Verde Alpi" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Verde Alpi</h3>
+                            <p>Rich green marble with natural patterns, bringing nature indoors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="card">
+                        <img src="./src/CALACATTA_GOLD_A.jpg" alt="Calacatta Gold" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Calacatta Gold</h3>
+                            <p>Luxurious white marble with golden veins, a symbol of opulence.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="./src/STATUARIO-VENATINO.jpg" alt="Statuario Marble" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Statuario Marble</h3>
+                            <p>Premium white marble with bold veining, ideal for statement designs.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card">
+                        <img src="./src/GREY-EMPERADOR.jpg" alt="Emperador Marble" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Emperador </h3>
+                            <p>Rich brown marble with white veining, perfect for warm interiors.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card">
+                        <img src="./src/Azul_Macaubas.jpeg" alt="Azul Macaubas" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Azul Macaubas</h3>
+                            <p>Exotic blue quartzite marble, adding a cool and unique touch.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="card">
+                        <img src="./src/levanto_red.jpg" alt="Rosso Levanto" class="img-fluid">
+                        <div class="card-content">
+                            <h3>Rosso Levanto</h3>
+                            <p>Deep red marble with white veins, adding drama and sophistication.</p>
+                            <a href="login.php" class="quote-btn">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+            <div class="text-center mt-4">
+                <a href="./public/explore.php" class="explore-btn">Experience the Elegance</a>
+            </div>
+
+            
+        </div>
+    </section>
+
+    
+    
+    
+   
+    
+    <!-- Testimonials -->
+        <section class="testimonials bg-light py-5">
+            <div class="container text-center">
+                <h2 data-aos="fade-up" class="mb-4 fw-bold">What Our Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-box active">
+                        <p>“Gravia's marble transformed my home! High quality and amazing service.”</p>
+                        <h5>- John Doe</h5>
+                    </div>
+                    <div class="testimonial-box">
+                        <p>“Best experience ever! The custom installation was perfect.”</p>
+                        <h5>- Jane Smith</h5>
+                    </div>
+                    <div class="testimonial-box">
+                        <p>“Their luxury marble collection is stunning. Highly recommended!”</p>
+                        <h5>- Mark Wilson</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<?php include './includes/footer.php'; ?>
+
+
+            <!-- Bootstrap Bundle with Popper.js -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                <script src="js/scripts.js"></script>
+
+
 </body>
-</html>
+</head>

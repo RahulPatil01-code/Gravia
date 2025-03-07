@@ -1,0 +1,345 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --light-gray: #f4f4f4;
+    --text-color: #333;
+}
+
+h1, h2, h3, .highlight {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+body, p, a, li {
+    font-family: 'Lora', serif;  /* Option 1 */
+    /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
+    line-height: 1.6;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensures that body and html have no margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Top Navbar Styles */
+.top-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 10px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-navbar .navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.top-navbar .search-bar {
+    width: 300px;
+}
+
+.top-navbar .search-bar .form-control {
+    border-radius: 20px;
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.top-navbar .nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.top-navbar .nav-icons a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.top-navbar .nav-icons a:hover {
+    color: black;
+}
+
+.top-navbar .nav-icons i {
+    font-size: 1.2rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    align-items: center;
+}
+
+.nav-icons a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-icons a i {
+    font-size: 18px;
+    color: black; /* Blue icon color */
+    transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+    background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+.nav-icons a:hover i {
+    color: black; /* Darker blue on hover */
+}
+
+/* Bottom Navbar Styles */
+.bottom-navbar {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.bottom-navbar .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom-navbar .nav-item {
+    position: relative;
+}
+
+.bottom-navbar .nav-link {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0px 15px;
+    transition: all 0.3s ease;
+}
+
+.bottom-navbar .nav-link:hover {
+    color: black;
+}
+
+.bottom-navbar .dropdown-menu {
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.bottom-navbar .dropdown-item {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+/* Enable dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Smooth transition */
+.dropdown-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Bar */
+.bottom-navbar {
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Mega Menu */
+.mega-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100vw; /* Full width */
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 999;
+}
+
+/* Show Mega Menu on Hover */
+.nav-item:hover .mega-menu {
+    display: block;
+}
+
+/* Mega Menu Content */
+.mega-menu .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Column Styling */
+.mega-menu .col-md-2 {
+    min-width: 180px;
+}
+
+.mega-menu h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.mega-menu .dropdown-item {
+    font-size: 14px;
+    padding: 5px 0;
+    color: black;
+}
+
+.mega-menu .dropdown-item:hover {
+    color: #007bff;
+}
+
+/* Mobile Menu Styles */
+.mobile-actions {
+    display: none;
+}
+
+.mobile-search-toggle,
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: black;
+    padding: 5px;
+}
+
+.mobile-offcanvas {
+    width: 80%;
+    max-width: 300px;
+}
+
+.mobile-offcanvas-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-group {
+    margin-bottom: 20px;
+}
+
+.mobile-nav-group-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 5px;
+}
+
+.mobile-nav-links a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.mobile-nav-links .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-links .collapse {
+    padding-left: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .top-navbar {
+        position: relative;
+        padding: 10px 15px !important;
+    }
+    
+    .top-navbar .search-bar {
+        display: none;
+    }
+    
+    .top-navbar .nav-icons {
+        display: none;
+    }
+    
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .bottom-navbar {
+        display: none;
+    }
+}
+
+/* For tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .top-navbar .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* For mobile view */
+@media (max-width: 767px) {
+    .top-navbar .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}

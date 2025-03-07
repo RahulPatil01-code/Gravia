@@ -766,12 +766,7 @@ html, body {
 .custom-footer {
     background-color: white;
     padding: 40px 0;
-}
-
-
-.custom-footer {
-    background-color: white;
-    padding: 40px 0;
+    padding-bottom: 0px;
 }
 .footer-link {
     color: black;

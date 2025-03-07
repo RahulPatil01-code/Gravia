@@ -1,0 +1,505 @@
+h1, h2, h3, .highlight {
+    font-family: 'Cinzel', serif;
+    font-weight: 700  !important;
+}
+body, p, a, li {
+    font-family: 'Lora', serif;  /* Option 1 */
+    /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
+}
+
+/* Ensures that body and html have no margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../src/explore.hero.jpg'); /* Default Image */
+    transition: background-image 1s ease-in-out; /* Smooth transition */
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;  /* Ensure text is above image */
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-overlay h1, .hero-overlay p {
+    opacity: 90%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-overlay.fade-in h1,
+.hero-overlay.fade-in p {
+    opacity: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+    
+    #hero-title {
+        font-size: 2rem;
+    }
+
+    #hero-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+        padding: 10px;
+    }
+
+    .hero-overlay {
+        padding: 20px;
+    }
+
+    #hero-title {
+        font-size: 1.8rem;
+    }
+
+    #hero-text {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* colletion section */
+.gallery {
+    padding: 50px 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    width: 310px;
+    height: 420px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content{
+    flex-grow: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-content h3{
+    width: 280px;
+    min-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0px;
+    padding: 0 0px;
+}
+
+.card-content p {
+    display: -webkit-box;
+    line-clamp: 2; 
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allows wrapping but restricts lines */
+    height: 3em; /* Adjust height to match 2 lines */
+}
+
+/* Initially hide the button */
+.quote-btn {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    background: #ff5722;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px auto;
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+
+/* Hover effect to expand the card and show button */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (hover: hover) {
+    .card:hover {
+        transform: scale(1.02);
+        /* height: 350px; Expands slightly from the bottom */
+    }
+}
+
+/* 📱 Mobile Optimizations */
+@media screen and (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .card img {
+        height: 220px; /* Slightly smaller images for better fit */
+    }
+
+    .quote-btn {
+        opacity: 1;  /* Always visible on mobile */
+        transform: translateY(0);
+    }
+}
+
+ /* Collection section close  */
+
+
+ 
+ /* Explore Collection Button */
+.explore-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff5722;  /* Vibrant color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.explore-btn:hover {
+    background: #e64a19; /* Slightly darker */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Trending products */
+
+/* General Card Styling */
+
+/* Wishlist Button */
+.wishlist-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heart Icon */
+.wishlist-icon i {
+    font-size: 15px;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.wishlist-icon:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Active (Clicked) State */
+.wishlist-icon.added {
+    background: white;
+    /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3); */
+    animation: bounce 0.3s ease-in-out;
+}
+
+.wishlist-icon.added i {
+    color: #ff4d4d; /* Red Heart */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+
+
+/* Wishlist notification popup */
+/* Wishlist notification popup */
+.wishlist-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.4s ease-in-out;
+    z-index: 999;
+}
+
+/* Green tick icon */
+.wishlist-popup i {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+/* Show the notification */
+.wishlist-popup.show {
+    bottom: 20px;
+}
+
+/* Wishlist heart color */
+.added {
+    color: red; /* Make heart red when added */
+}
+
+
+
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures uniform card height */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.card img {
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%; /* Ensures full width */
+}
+
+/* Card Body */
+.card-body {
+    flex-grow: 1; /* Ensures equal height distribution */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+
+/* Buy Now Button */
+.btn-success {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) { /* For tablets & smaller screens */
+    .col-md-3 {
+        flex: 0 0 50%; /* 2 cards per row */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) { /* For mobile screens */
+    .col-md-3 {
+        flex: 0 0 100%; /* 1 card per row */
+        max-width: 100%;
+    }
+}
+
+
+/* Category section */
+
+.category-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card img {
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover;
+}
+
+.category-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 
+.category-card h5 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+} */
+
+.category-card .card-text {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+.category-card .btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.category-card .btn:hover {
+    background-color: #e64a19;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+/* Feeddback section */
+
+.testimonial-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    height: 120px; /* Adjust height as needed */
+}
+
+
+.testimonial-box {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial-box.exit {
+    transform: translateX(-100%);
+    opacity: 0;
+}

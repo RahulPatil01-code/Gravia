@@ -123,6 +123,7 @@ html, body {
     background-position: center;
     background-image: url('../src/explore.hero.jpg'); /* Default Image */
     transition: background-image 1s ease-in-out; /* Smooth transition */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-overlay {
@@ -142,6 +143,7 @@ html, body {
 .hero-overlay h1, .hero-overlay p {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-overlay.fade-in h1,
@@ -157,14 +159,17 @@ html, body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .hero-content p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     font-size: 1.5rem;
 }
 
@@ -553,12 +558,7 @@ html, body {
 .custom-footer {
     background-color: white;
     padding: 40px 0;
-}
-
-
-.custom-footer {
-    background-color: white;
-    padding: 40px 0;
+    padding-bottom: 0px;
 }
 .footer-link {
     color: black;

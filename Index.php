@@ -303,7 +303,7 @@
     <!-- Projects Section -->
     <section class="py-5 text-center text-white bg-dark" id="Project-section">
         <div class="container">
-            <h2 data-aos="fade-up" class="mb-4" class="project-headding">Our Projects</h2>
+            <h2 data-aos="fade-up" class="mb-4" class="text-center">Our Projects</h2>
             <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
                 Explore our <span class="highlight">Exceptional flooring projects</span>, designed to bring <span class="highlight">elegance</span>and<span class="highlight"> durability</span> to every space.  
                 From<span class="highlight"> luxurious interiors</span> to modern commercial areas, we redefine <span class="highlight">craftsmanship</span> with innovation.
@@ -592,6 +592,7 @@
                     </div>
                 </form>
             </div>
+            <p class="text-center mt-3">&copy; 2025 Gravia. All rights reserved.</p>
         </div>
     </div>
 </footer>

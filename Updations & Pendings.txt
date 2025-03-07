@@ -19,8 +19,12 @@ navbar close icon on  mobile screen and function's
 
 Pendings- 
 Home-page Guest view
-1. send message
+1. Contact us form submission 
 2. Ceo image and detail's
 3.logics after login same page redirection.
-4.contact us with backend and show up on admin panel
+4.contact us with backend and show up on admin panel.
+5. Subcribe to mail (Blog,Footer)
+
+workings :-
+1. font same size for all heading all page checking
 

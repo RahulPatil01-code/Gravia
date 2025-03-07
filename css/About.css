@@ -162,9 +162,11 @@ html, body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 1.5rem;
 }
@@ -559,12 +561,7 @@ p {
 .custom-footer {
     background-color: white;
     padding: 40px 0;
-}
-
-
-.custom-footer {
-    background-color: white;
-    padding: 40px 0;
+    padding-bottom: 0px;
 }
 .footer-link {
     color: black;

@@ -157,6 +157,7 @@
                     </div>
                 </form>
             </div>
+            <p class="text-center mt-3">&copy; 2025 Gravia. All rights reserved.</p>
         </div>
     </div>
 </footer>
