@@ -1,0 +1,160 @@
+
+ 
+/* Wishlist Button */
+.wishlist-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    margin-right: 10px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heart Icon */
+.wishlist-icon i {
+    font-size: 15px;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.wishlist-icon:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Active (Clicked) State */
+.wishlist-icon.added {
+    background: white;
+    /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3); */
+    animation: bounce 0.3s ease-in-out;
+}
+
+.wishlist-icon.added i {
+    color: #ff4d4d; /* Red Heart */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+
+/* Wishlist notification popup */
+.wishlist-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.4s ease-in-out;
+    z-index: 999;
+}
+
+/* Green tick icon */
+.wishlist-popup i {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+/* Show the notification */
+.wishlist-popup.show {
+    bottom: 20px;
+}
+
+/* Wishlist heart color */
+.added {
+    color: red; /* Make heart red when added */
+}
+
+
+/* Product detail  */
+
+h4.text-estimate {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #444; /* Darker gray for better readability */
+    border-left: 5px solid #FFB997; /* Soft pastel green accent */
+    padding-left: 10px;
+}
+#price {
+    color: #FF6B6B; /* Muted teal for a premium feel */
+    font-weight: bold;
+}
+
+/* Fixed size for the main image */
+/* Container for the main image to maintain fixed size */
+.main-image-container {
+    width: 100%; /* Take full width */
+    max-width: 700px; /* Limit max width */
+    height: 370px; /* Fixed height */
+    display: flex; /* Flexbox to align image properly */
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Ensure the main image covers the space properly */
+.main-img {
+    width: 100%; /* Make it flexible */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Ensures the image scales properly */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Fixed size for thumbnails */
+.thumb {
+    width: 50px;  /* Fixed width */
+    height: 50px; /* Fixed height */
+    object-fit: cover; /* Crop images to fit */
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Highlight the active thumbnail */
+.thumb.active {
+    border-color: black;
+    opacity: 0.7;
+}
+
+.image-section {
+    position: sticky;
+    top: 20px;
+    height: 500px;
+}
+
+.details-section {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.main-image-container {
+    position: sticky;
+    top: 20px; /* Adjust if needed */
+}
+
+.details-container {
+    overflow: visible !important; /* Allow natural scrolling */
+    max-height: none !important; /* Remove height restriction */
+}

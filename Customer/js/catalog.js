@@ -84,3 +84,45 @@ function sortProducts() {
     catalog.innerHTML = "";
     products.forEach(product => catalog.appendChild(product));
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryData = {
+        "granite": { image: "images/granite.jpg", text: "Timeless beauty of Granite." },
+        "marble": { image: "images/marble.jpg", text: "Luxury and elegance of Marble." },
+        "onyx": { image: "images/onyx.jpg", text: "Bold and exotic Onyx collection." },
+        "quartz": { image: "images/quartz.jpg", text: "Durable and stunning Quartz stones." },
+        "limestone": { image: "images/limestone.jpg", text: "Classic charm of Limestone." },
+        "travertine": { image: "images/travertine.jpg", text: "Rustic beauty with Travertine." },
+        "soapstone": { image: "images/soapstone.jpg", text: "Smooth and natural Soapstone." },
+        "slate": { image: "images/slate.jpg", text: "Modern look with premium Slate." },
+        "sandstone": { image: "images/sandstone.jpg", text: "Earthy elegance of Sandstone." },
+        "basalt": { image: "images/basalt.jpg", text: "Strong and stylish Basalt stones." },
+        "dolomite": { image: "images/dolomite.jpg", text: "Sophisticated touch with Dolomite." },
+        "serpentine": { image: "images/serpentine.jpg", text: "Unique textures of Serpentine." },
+        "blue-stone": { image: "images/bluestone.jpg", text: "Cool and classy Bluestone." },
+        "porphyry": { image: "images/porphyry.jpg", text: "Distinctive patterns of Porphyry." },
+        "andesite": { image: "images/andesite.jpg", text: "Durability meets style in Andesite." },
+        "quartzite": { image: "images/quartzite.jpg", text: "Quartzite for a natural glow." },
+        "tuff": { image: "images/tuff.jpg", text: "Volcanic elegance with Tuff stone." },
+        "gneiss": { image: "images/gneiss.jpg", text: "Layered beauty of Gneiss stone." },
+        "schist": { image: "images/schist.jpg", text: "Unique textures with Schist." },
+        "pegmatite": { image: "images/pegmatite.jpg", text: "Rare elegance of Pegmatite." },
+        "rhyolite": { image: "images/rhyolite.jpg", text: "Exquisite appeal of Rhyolite." },
+        "siltstone": { image: "images/siltstone.jpg", text: "Fine-grained beauty of Siltstone." },
+        "chalk": { image: "images/chalk.jpg", text: "Soft and subtle charm of Chalk." },
+        "breccia": { image: "images/breccia.jpg", text: "Fragmented beauty with Breccia." },
+        "flint": { image: "images/flint.jpg", text: "Ancient elegance of Flint stone." },
+        "chert": { image: "images/chert.jpg", text: "Durable and refined Chert stones." }
+    };
+
+    // Get current category from URL (e.g., ?category=granite)
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+
+    if (category && categoryData[category]) {
+        document.getElementById("hero-image").src = categoryData[category].image;
+        document.getElementById("hero-text").innerText = categoryData[category].text;
+    }
+});

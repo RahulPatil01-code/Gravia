@@ -37,7 +37,7 @@
             <a href="#"><i class="fas fa-heart"></i></a>
             <a href="#"><i class="fas fa-shopping-cart"></i></a>
             <a href="#"><i class="fas fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-sign-out-alt"></i></a>
+            <a href="/Gravia/public/logout.php"><i class="fa-solid fa-sign-out-alt"></i></a>
         </div>
         
         <div class="mobile-actions">

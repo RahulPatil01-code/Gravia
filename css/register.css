@@ -1,0 +1,348 @@
+/* Styles for h1, h2, h3, and .highlight */
+h1, h2, h3, .highlight {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+}
+
+/* Body and general text styling */
+body, p, a, li {
+  font-family: 'Lora', serif;  /* Option 1 */
+  /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
+}
+
+/* Ensures no margin or padding in body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Form inputs and button */
+input, textarea, select, a {
+  font-family: "Poppins-Regular";
+  color: #333;
+  font-size: 13px;
+}
+
+/* Resetting margin for common elements */
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+
+/* Ensuring images don't overflow */
+img {
+  max-width: 100%;
+}
+
+/* Style for unordered lists */
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Removing underline on link hover */
+a:hover {
+  text-decoration: none;
+}
+
+/* Focus outline removal */
+:focus {
+  outline: none;
+}
+
+/* Main wrapper styling */
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #777;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+}
+
+
+/* Inner form structure */
+.inner {
+  padding: 20px;
+  background: #fff;
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+}
+
+.inner .image-holder {
+  width: 50%;
+}
+
+.inner form {
+  width: 50%;
+  padding-top: 36px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.inner h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: "Poppins-SemiBold";
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+}
+
+.form-group input {
+  width: 50%;
+}
+
+.form-group input:first-child {
+  margin-right: 25px;
+}
+
+/* Input wrapper */
+.form-wrapper {
+  position: relative;
+}
+
+/* Icon inside input field */
+.form-wrapper i {
+  position: absolute;
+  bottom: 9px;
+  right: 0;
+}
+
+/* Styling form input fields */
+.form-control {
+  border: none;
+  border-bottom: 1px solid #333;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 25px;
+  border-radius: 0;
+}
+
+/* Placeholder styling */
+.form-control::-webkit-input-placeholder {
+  font-size: 13px;
+  color: #333;
+  font-family: "Poppins-Regular";
+}
+
+.form-control::-moz-placeholder {
+  font-size: 13px;
+  color: #333;
+  font-family: "Poppins-Regular";
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 13px;
+  color: #333;
+  font-family: "Poppins-Regular";
+}
+
+.form-control:-moz-placeholder {
+  font-size: 13px;
+  color: #333;
+  font-family: "Poppins-Regular";
+}
+
+::placeholder {
+  font-size: 15px !important;
+  color: #333;
+  font-family: "Poppins-Regular";
+  opacity: 1;
+}
+
+/* Adjust font-size for inputs */
+input, textarea, select {
+  font-size: 14px !important;
+}
+
+/* Input box styling */
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Styling for select elements */
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+/* Button (now <a> tags) styling */
+.btn {
+  display: inline-block;
+  border: none;
+  width: 164px;
+  height: 51px;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 51px;
+  padding: 0;
+  background: #333;
+  font-size: 15px;
+  color: #fff;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+}
+
+.btn-container {
+  display: flex; /* Flexbox to align buttons side by side */
+  justify-content: center; /* Center align buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
+
+
+a.btn i {
+  margin-left: 10px;
+  transform: translateZ(0);
+}
+
+a.btn:hover i, a.btn:focus i, a.btn:active i {
+  animation-name: hvr-icon-wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+/* Keyframes for animation */
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    transform: translateX(6px);
+  }
+  33.3% {
+    transform: translateX(-5px);
+  }
+  49.95% {
+    transform: translateX(4px);
+  }
+  66.6% {
+    transform: translateX(-2px);
+  }
+  83.25% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced arrow animation */
+@keyframes arrow-animation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  49% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+a.btn:hover i {
+  animation: arrow-animation 1s infinite;
+}
+
+/* Responsive styles */
+@media (max-width: 1199px) {
+  .wrapper {
+    background-position: right center;
+  }
+}
+
+@media (max-width: 991px) {
+  .inner form {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    display: block;
+    padding: 0;
+  }
+  .inner .image-holder {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .inner .image-holder img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+  .inner form {
+    width: 100%;
+    padding: 40px 30px 30px;
+  }
+
+  a.btn {
+    width: 48%;
+  }
+
+  button {
+    margin-top: 60px;
+  }
+}
+
+/* Add subtle focus effect for inputs */
+input:focus, select:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Add subtle transition effect for form elements */
+.form-control, .btn, select {
+  transition: all 0.3s ease;
+}

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /login.php"); // Redirect to login if session is not set
+    exit();
+}
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -168,7 +179,7 @@
                         <div class="card-content">
                             <h3>Carrara Marble</h3>
                             <p>Iconic Italian marble with soft gray veins, perfect for luxury interiors.</p>
-                            <a href="login.php" class="quote-btn">View detail's</a>
+                            <a href="./public/product.php" class="quote-btn">View detail's</a>
                         </div>
                     </div>
                 </div>
