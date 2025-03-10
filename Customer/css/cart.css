@@ -1,0 +1,234 @@
+/* Font Styles */
+h1, h2, h3, .highlight {
+    font-family: 'Cinzel', serif;
+    font-weight: 700 !important;
+}
+
+body, p, a, li {
+    font-family: 'Lora', serif;
+}
+
+/* Reset & General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Wishlist Container */
+.wishlist-container {
+    margin: 70px auto;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Wishlist Items */
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    flex-wrap: nowrap; /* Prevents stacking on larger screens */
+}
+
+.wishlist-item img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    flex-shrink: 0; /* Prevents image from shrinking */
+    margin-right: 15px; /* Creates space between image and details */
+}
+
+.wishlist-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Product Details */
+.wishlist-details {
+    flex-grow: 1;
+    margin-left: 15px;
+    min-width: 200px;
+}
+
+.wishlist-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.wishlist-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+/* Dimensions & Price */
+.wishlist-details .dimensions {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    background: #e6e6e6;
+    padding: 5px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.wishlist-details .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Pricing */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.discount {
+    color: #28a745;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Wishlist Actions */
+.wishlist-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Buttons */
+.remove-btn, .checkout-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.checkout-btn {
+    background: #28a745;
+}
+
+.remove-btn:hover {
+    background: #e60000;
+}
+
+.checkout-btn:hover {
+    background: #218838;
+}
+
+
+.order-now-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.order-now-container p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.order-now-btn {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.order-now-btn:hover {
+    background: #e65c00;
+}
+
+
+
+/* Details Button (Aligned Right) */
+.details-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-left: auto; /* Pushes to the right */
+}
+
+.details-btn:hover {
+    background: #0056b3;
+}
+
+
+a {
+    text-decoration: none !important; /* Removes the blue underline */
+    color: inherit; /* Keeps the text color consistent */
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+    .wishlist-item {
+        flex-direction: row; /* Keeps image on left, details on right */
+        align-items: flex-start;
+    }
+    
+    .wishlist-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

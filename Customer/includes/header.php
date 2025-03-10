@@ -34,9 +34,9 @@
         </div>
 
         <div class="nav-icons">
-            <a href="#"><i class="fas fa-heart"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="/Gravia/customer/public/wishlist.php"><i class="fas fa-heart"></i></a>
+            <a href="/Gravia/customer/public/cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/Gravia/customer/public/profile.php"><i class="fas fa-user"></i></a>
             <a href="/Gravia/public/logout.php"><i class="fa-solid fa-sign-out-alt"></i></a>
         </div>
         
@@ -68,11 +68,11 @@
                 <h6 class="mobile-nav-group-title">Marble Types</h6>
                 <ul class="mobile-nav-links">
                     <li>
-                        <a href="../public/catalog.php" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#italianMarble">
+                        <a href="/Gravia/customer/public/catalog.php" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#italianMarble">
                             Italian Marble
                         </a>
                         <ul id="italianMarble" class="collapse">
-                            <li><a href="../public/catalog.php">Statuario</a></li>
+                            <li><a href="/Gravia/customer/public/catalog.php">Statuario</a></li>
                             <li><a href="#">Carrara</a></li>
                             <li><a href="#">Calacatta</a></li>
                             <li><a href="#">Botticino</a></li>
@@ -161,9 +161,9 @@
         <div class="container d-flex justify-content-center">
             <ul class="nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./public/catalog.php" role="button">Italian Marble</a>
+                    <a class="nav-link dropdown-toggle" href="/Gravia/customer/public/catalog.php" role="button">Italian Marble</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Statuario</a></li>
+                        <li><a class="dropdown-item" href="/Gravia/customer/public/catalog.php">Statuario</a></li>
                         <li><a class="dropdown-item" href="#">Carrara</a></li>
                         <li><a class="dropdown-item" href="#">Calacatta</a></li>
                         <li><a class="dropdown-item" href="#">Botticino</a></li>
