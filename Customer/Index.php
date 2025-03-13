@@ -1,11 +1,5 @@
 <?php
-session_start();
 
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: /login.php"); // Redirect to login if session is not set
-    exit();
-}
 ?>
 
 
@@ -42,7 +36,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
 
-<?php include './includes/header.php'; ?>
+<?php include_once './includes/header.php'; ?>
     
     <section class="hero">
     

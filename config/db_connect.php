@@ -1,4 +1,6 @@
 <?php
+
+define('BASE_PATH', __DIR__);
 $servername = "localhost";
 $username = "root"; // Change if you have a different username
 $password = ""; // Change if you have a database password

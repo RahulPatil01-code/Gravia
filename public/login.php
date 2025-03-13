@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         mysqli_stmt_store_result($stmt);
 
         if (mysqli_stmt_num_rows($stmt) > 0) {
-            mysqli_stmt_bind_result($stmt, $user_id, $hashed_password, $username);
+            mysqli_stmt_bind_result($stmt, $id, $hashed_password, $username);
             mysqli_stmt_fetch($stmt);
 
             if (password_verify($password, $hashed_password)) {
                 // Set session variables
-                $_SESSION['user_id'] = $user_id;
+                $_SESSION['id'] = $id;
                 $_SESSION['username'] = $username;
 
                 $_SESSION['alert_message'] = "Swal.fire('Success!', 'Login Successful! Redirecting...', 'success').then(() => {
@@ -37,8 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             $_SESSION['alert_message'] = "Swal.fire('Error!', 'No account found with this email!', 'error');";
         }
     }
-
-    mysqli_close($conn);
 }
 ?>
 

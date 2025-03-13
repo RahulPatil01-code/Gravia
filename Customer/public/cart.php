@@ -30,7 +30,7 @@
 </head>
 <body>
 
-<?php include '../includes/header.php'; ?>
+<?php include_once '../includes/header.php'; ?>
 
 
 <div class="wishlist-container">

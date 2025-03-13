@@ -28,6 +28,7 @@ html, body {
     background-color: white;
     padding: 40px 0;
     padding-bottom: 0px;
+    margin-top: auto;
 }
 .footer-link {
     color: black;

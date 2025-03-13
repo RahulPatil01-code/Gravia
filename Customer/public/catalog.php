@@ -1,3 +1,22 @@
+<?php
+include '../../config/db_connect.php'; // Include database connection
+
+
+// Connect to database
+$conn = new mysqli("localhost", "root", "", "gravia");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$query = "SELECT * FROM products";
+$result = mysqli_query($conn, $query);
+
+$delay = 70;
+
+mysqli_close($conn);
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,64 +79,30 @@
                             <option value="name-desc">Name: Z to A</option>
                         </select>
                     </div>
+
+            
             <div class="row">
-                <div class="col-md-3" data-aos="zoom-in">
-                    <div class="card">
-                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                        <img src="./src/BIANCO-CARRARA.jpg" alt="Carrara Marble" class="img-fluid">
-                        <div class="card-content">
-                            <h3>Carrara Marble</h3>
-                            <p>Iconic Italian marble with soft gray veins, perfect for luxury interiors.</p>
-                            <a href="login.php" class="quote-btn">View detail's</a>
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="<?php echo $delay; ?>">
+                        <div class="card">
+                            <div class="wishlist-icon" onclick="toggleWishlist(this, '<?php echo $row['name']; ?>')">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <img src="<?php echo $row['image_main']; ?>" alt="<?php echo $row['name']; ?>" class="img-fluid">
+                            <div class="card-content">
+                                <h3><?php echo $row['name']; ?></h3>
+                                <p><?php echo $row['short_desc']; ?></p>
+                                <a href="product.php?id=<?= $row['id'] ?>" class="quote-btn">View Details</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card">
-                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                        <img src="./src/GREY-EMPERADOR.jpg" alt="Nero Marquina" class="img-fluid">
-                        <div class="card-content">
-                            <h3>Nero Marquina</h3>
-                            <p>Deep black marble with striking white veins, a bold and elegant choice.</p>
-                            <a href="login.php" class="quote-btn">View detail's</a>
-                        </div>
-                    </div>
-                </div>
+                <?php 
+             $delay += 50;
+             } ?>
 
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="card">
-                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                        <img src="./src/Azul_Macaubas.jpeg" alt="Azul Macaubas" class="img-fluid">
-                        <div class="card-content">
-                            <h3>Azul Macaubas</h3>
-                            <p>Exotic blue quartzite marble, adding a cool and unique touch.</p>
-                            <a href="login.php" class="quote-btn">View detail's</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="card">
-                    <div class="wishlist-icon" onclick="toggleWishlist(this, 'Marble A')">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                        <img src="./src/levanto_red.jpg" alt="Rosso Levanto" class="img-fluid">
-                        <div class="card-content">
-                            <h3>Rosso Levanto</h3>
-                            <p>Deep red marble with white veins, adding drama and sophistication.</p>
-                            <a href="login.php" class="quote-btn">View detail's</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
-                </div>
+
         </div>
 </section>      
 

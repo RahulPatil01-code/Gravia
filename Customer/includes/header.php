@@ -131,7 +131,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#granite">
+                        <a href="/Gravia/customer/public/add_product.php" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#granite">
                             Granite
                         </a>
                         <ul id="granite" class="collapse">
@@ -212,7 +212,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button">Granite</a>
+                    <a class="nav-link dropdown-toggle" href="/Gravia/customer/public/add_product.php" role="button">Granite</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Black Granite</a></li>
                         <li><a class="dropdown-item" href="#">White Granite</a></li>

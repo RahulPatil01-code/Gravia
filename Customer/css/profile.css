@@ -7,102 +7,363 @@ body, p, a, li {
     /* font-family: 'Open Sans', sans-serif; */  /* Option 2 */
 }
 
-/* Ensures that body and html have no margin */
+/* Reset margins & padding */
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-
-
-
-/* Sidebar Styling */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #1e1e1e;
-    color: white;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 20px;
+    min-height: 100vh; /* Allow page to grow */
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 600;
+/* Overall Container */
+.profile-container {
+    display: flex;
+    margin: 20px auto; /* Center horizontally */
+    padding: 0 50px; /* Instead of margin, use padding */
+    max-width: 90vw; /* Adjust dynamically to avoid overflow */
+    flex-grow: 1;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+
+    align-items: flex-start;
+    box-sizing: border-box; /* Ensures padding doesn't exceed width */
 }
 
-.sidebar a {
+
+
+/* Sidebar */
+.menu-box {
+    width: 250px; /* Fixed width */
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    min-height: 100vh; /* Ensures full sidebar height */
+    overflow-y: auto;
+    margin-bottom: 2px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-menu li a {
     text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: background 0.3s;
 }
 
-.sidebar a:hover, .sidebar a.active {
-    background: #ff6600;
-    color: white;
+/* Hide submenus initially */
+.submenu {
+    display: none;
+    padding-left: 15px;
+    transition: max-height 0.3s ease-in-out;
 }
 
-.sidebar i {
-    font-size: 18px;
+/* Style for the menu-title */
+.menu-title {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Profile Page Content */
-.profile-container {
-    margin-left: 270px;
-    padding: 40px;
-    max-width: 800px;
-    font-family: 'Poppins', sans-serif;
+/* Arrow rotation for active menu */
+.menu-title.active i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
-.profile-container h2 {
-    font-size: 26px;
-    font-weight: 600;
+
+/* Sidebar Title */
+.sidebar-menu .menu-title {
+    font-weight: bold;
+    color: #777;
+    font-size: 13px;
+    padding: 10px 15px;
+    background: #f7f7f7;
+}
+
+/* Sidebar Logout */
+.sidebar-menu .logout {
+    color: red;
+    font-weight: bold;
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-.profile-container form {
+.profile-box-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    padding: 5px;
+}
+
+.profile-text {
+    margin-left: 10px;
+}
+
+.profile-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.profile-text h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Main Content Area */
+/* Content Area - Expands Full Height */
+.content-area {
+    flex-grow: 1; /* Takes remaining space */
+    padding: 30px;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    max-width: calc(100% - 260px); /* Adjust width dynamically */
+    width: 100%;
+
+
+    min-height: 100%;
+    align-self: stretch;
 }
 
-.profile-container label {
-    font-size: 16px;
-    font-weight: 500;
-}
 
-.profile-container input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+
+/* Info Box - Matches Profile Box & Stretches Full Height */
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Ensures it stretches */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     width: 100%;
 }
 
-.profile-container button {
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.profile-container button:hover {
-    background: #cc5200;
+/* Profile Picture */
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    padding: 3px;
+}
+
+/* Username Styling */
+.username {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* User Details */
+.user-details {
+    text-align: left;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+/* User Info Container */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Each Column */
+.column {
+    width: 48%;
+}
+
+/* Full-Width Columns */
+.full-width {
+    width: 100%;
+}
+
+/* Paragraph Styling */
+p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Edit Profile Button */
+.edit-profile-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+
+    
+}
+.edit-profile-btn:hover {
+    background: #388E3C;
+}
+
+/* profile update form  */
+
+#editForm, #userDetails {
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Match Profile Header & Layout */
+#edit-form {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User Info Container */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Form Labels */
+#edit-form label {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Input Fields */
+#edit-form input,
+#edit-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#edit-form input:focus,
+#edit-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Profile Picture Upload (Hidden Input) */
+.profile-pic input[type="file"] {
+    display: none;
+}
+
+/* Full Width Column */
+.full-width {
+    width: 100%;
+}
+
+/* Save & Cancel Buttons */
+#edit-form button {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#edit-form button[name="save_changes"] {
+    background: #4CAF50;
+    color: #fff;
+}
+
+#edit-form button[name="save_changes"]:hover {
+    background: #388E3C;
+}
+
+#edit-form button[type="button"] {
+    background: #ccc;
+    color: #333;
+}
+
+#edit-form button[type="button"]:hover {
+    background: #bbb;
+}
+
+
+
+/* Footer - Sticks to Bottom */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
 }

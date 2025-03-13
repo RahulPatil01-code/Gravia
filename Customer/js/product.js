@@ -95,3 +95,14 @@ function swapImage(selectedImage) {
 }
 
 
+
+
+
+function swapImage(element) {
+    document.getElementById("mainImage").src = element.src;
+}
+
+function toggleWishlist(icon, productName) {
+    icon.classList.toggle("active");
+    alert(productName + " has been added to your wishlist!");
+}
