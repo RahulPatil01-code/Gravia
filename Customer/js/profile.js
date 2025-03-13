@@ -117,3 +117,142 @@ document.addEventListener("DOMContentLoaded", function () {
         editMode.style.display = "none";
     });
 });
+
+
+// Edit Menu toggle / Address management page 
+
+function toggleMenu(addressId) {
+    const menu = document.getElementById(`menu-${addressId}`);
+    
+    if (menu) {
+        // Hide all other menus before showing this one
+        document.querySelectorAll(".menu-options").forEach(m => {
+            if (m !== menu) {
+                m.style.display = "none";
+            }
+        });
+
+        // Toggle visibility
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    } else {
+        console.error(`Menu with ID menu-${addressId} not found!`);
+    }
+}
+
+// Close the menu when clicking outside
+document.addEventListener("click", function(event) {
+    if (!event.target.closest(".menu-icon") && !event.target.closest(".menu-options")) {
+        document.querySelectorAll(".menu-options").forEach(m => {
+            m.style.display = "none";
+        });
+    }
+});
+
+
+// Delete address 
+function deleteAddress(addressId) {
+    if (confirm("Are you sure you want to delete this address?")) {
+        fetch('delete_address.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'id=' + addressId
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Address deleted successfully!");
+                location.reload(); // Refresh the page to update the list
+            } else {
+                alert("Error: " + data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+}
+
+
+function deleteAddress(addressId) {
+    if (!confirm("Are you sure you want to delete this address?")) return;
+
+    fetch("delete_address.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "id=" + encodeURIComponent(addressId)
+    })
+    .then(response => response.text()) // Get response as text first
+    .then(text => {
+        console.log("🔍 Raw response from server:", text); // Debug response
+
+        let data;
+        try {
+            data = JSON.parse(text); // Try to parse JSON
+        } catch (error) {
+            console.error("❌ JSON Parse Error:", error);
+            alert("Error: Invalid response from server.");
+            return;
+        }
+
+        if (data.success) {
+            alert("✅ Address deleted successfully.");
+            location.reload(); // Refresh to reflect changes
+        } else {
+            alert("❌ Error: " + data.message);
+        }
+    })
+    .catch(error => console.error("❌ Request failed:", error));
+}
+
+// Password change page
+
+function updatePassword(userId) {
+    event.preventDefault(); // Prevent form reload
+
+    let currentPassword = document.getElementById("current_password").value;
+    let newPassword = document.getElementById("new_password").value;
+    let confirmPassword = document.getElementById("confirm_password").value;
+    let msgBox = document.getElementById("password-msg");
+
+    if (!msgBox) {
+        console.error("Error: #password-msg element not found!");
+        return;
+    }
+
+    msgBox.style.display = "block"; // Ensure it's visible
+
+    if (newPassword !== confirmPassword) {
+        msgBox.innerHTML = "❌ New passwords do not match!";
+        msgBox.className = "error fade-in";
+        return;
+    }
+
+    fetch("change_password.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            user_id: userId,
+            current_password: currentPassword,
+            new_password: newPassword
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Response from server:", data); // Debugging log
+
+        if (data.success) {
+            msgBox.innerHTML = "✅ Password changed successfully!";
+            msgBox.className = "success fade-in";
+        } else {
+            msgBox.innerHTML = "❌ " + data.message;
+            msgBox.className = "error fade-in";
+        }
+
+        msgBox.style.display = "block"; // Force show message
+    })
+    .catch(error => {
+        console.error("Fetch error:", error);
+        msgBox.innerHTML = "❌ An error occurred. Please try again.";
+        msgBox.className = "error fade-in";
+        msgBox.style.display = "block"; 
+    });
+}
+

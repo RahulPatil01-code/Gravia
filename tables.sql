@@ -16,3 +16,23 @@ CREATE TABLE `users` (
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 );
+
+
+user_addresses table to store user's address. 
+
+CREATE TABLE user_addresses (
+    id' INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,  -- Foreign key referencing users(id)
+    name VARCHAR(255) NOT NULL,
+    mobile_number VARCHAR(10) NOT NULL,
+    pincode VARCHAR(10) NOT NULL,
+    locality VARCHAR(255),
+    address TEXT NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    state VARCHAR(255) NOT NULL,
+    landmark VARCHAR(255) NULL,
+    alternate_phone VARCHAR(10) NULL,
+    address_type ENUM('Home', 'Work') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
