@@ -8,6 +8,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
+
 $id = $_SESSION['id'];
 
 // Sanitize and validate the page parameter
@@ -88,8 +89,56 @@ if (isset($_POST['save_address'])) {
     }
 }
     
-    
+// Password change code 
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    header('Content-Type: application/json'); // Ensure JSON response
+
+    $user_id = $_SESSION['id']; // Get logged-in user ID
+    $current_password = $_POST['current_password'] ?? '';
+    $new_password = $_POST['new_password'] ?? '';
+    $confirm_password = $_POST['confirm_password'] ?? '';
+
+    // Validate input fields
+    if (empty($current_password) || empty($new_password) || empty($confirm_password)) {
+        echo json_encode(["success" => false, "message" => "Please fill in all fields."]);
+        exit;
+    }
+
+    if ($new_password !== $confirm_password) {
+        echo json_encode(["success" => false, "message" => "New passwords do not match."]);
+        exit;
+    }
+
+    // Fetch user's current password from DB
+    $stmt = $conn->prepare("SELECT password FROM users WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows === 1) {
+        $stmt->bind_result($stored_password);
+        $stmt->fetch();
+
+        // Verify current password
+        if (password_verify($current_password, $stored_password)) {
+            // Hash new password and update in DB
+            $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $update_stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
+            $update_stmt->bind_param("si", $hashed_password, $user_id);
+
+            if ($update_stmt->execute()) {
+                echo json_encode(["success" => true, "message" => "Password updated successfully!"]);
+            } else {
+                echo json_encode(["success" => false, "message" => "Failed to update password."]);
+            }
+        } else {
+            echo json_encode(["success" => false, "message" => "Current password is incorrect."]);
+        }
+    } else {
+        echo json_encode(["success" => false, "message" => "User not found."]);
+    }
+}
     $stmt->close();
     $conn->close();
 }
@@ -149,23 +198,8 @@ if (isset($_POST['save_address'])) {
                 <li><a href="profile.php?page=change_password"><i class="fas fa-lock"></i> Change Password</a></li>
                 <li><a href="#"><i class="fas fa-box"></i> My Orders</a></li>
                 <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
-                <li class="menu-title" onclick="toggleMenu('payments')">
-                    Payments & Transactions <i class="fas fa-chevron-down"></i>
-                </li>
-                <ul id="payments" class="submenu">
-                    <li><a href="#"><i class="fas fa-wallet"></i> Saved Payment Methods</a></li>
-                    <li><a href="#"><i class="fas fa-gift"></i> Gift Cards & Coupons</a></li>
-                    <li><a href="#"><i class="fas fa-file-invoice"></i> Invoices & Receipts</a></li>
-                </ul>
-                <li class="menu-title" onclick="toggleMenu('support')">
-                    Customer Support <i class="fas fa-chevron-down"></i>
-                </li>
-                <ul id="support" class="submenu">
-                    <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
-                    <li><a href="#"><i class="fas fa-undo-alt"></i> Return & Refund Policy</a></li>
-                    <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Report an Issue</a></li>
-                </ul>
-                <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="#"><i class="fas fa-question"></i> My Inquires</a></li>
+                <li><a href="../../public/logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
     </div>
@@ -191,6 +225,10 @@ if (isset($_POST['save_address'])) {
 
                     if (isset($_POST['save_address'])) {
                         // Handle address update logic
+                    }
+
+                    if(isset($_POST['submit'])){
+
                     }
                 ?>
 

@@ -204,8 +204,8 @@ function deleteAddress(addressId) {
 
 // Password change page
 
-function updatePassword(userId) {
-    event.preventDefault(); // Prevent form reload
+function updatePassword(user_Id) {
+    event.preventDefault(); // Prevents form from refreshing the page
 
     let currentPassword = document.getElementById("current_password").value;
     let newPassword = document.getElementById("new_password").value;
@@ -217,7 +217,7 @@ function updatePassword(userId) {
         return;
     }
 
-    msgBox.style.display = "block"; // Ensure it's visible
+    msgBox.style.display = "block"; // Ensure message is visible
 
     if (newPassword !== confirmPassword) {
         msgBox.innerHTML = "❌ New passwords do not match!";
@@ -254,5 +254,84 @@ function updatePassword(userId) {
         msgBox.className = "error fade-in";
         msgBox.style.display = "block"; 
     });
+}
+
+document.getElementById("changePasswordForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page refresh
+
+    let formData = new FormData(this);
+
+    fetch("change_password.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // ✅ Show Success Alert
+            alert("Password changed successfully!");
+            location.reload(); // Refresh page after success (optional)
+        } else {
+            // ❌ Show Error Alert
+            alert("Error: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again!");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("#updatePasswordBtn").addEventListener("click", () => {
+        const currentPassword = document.querySelector("#current_password").value;
+        const newPassword = document.querySelector("#new_password").value;
+        const confirmPassword = document.querySelector("#confirm_password").value;
+        const alertBox = document.querySelector("#alertBox");
+
+        if (!currentPassword || !newPassword || !confirmPassword) {
+            showAlert("Please fill in all fields.", "danger");
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            showAlert("New password and confirm password do not match.", "danger");
+            return;
+        }
+
+        fetch("change_password.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `current_password=${encodeURIComponent(currentPassword)}&new_password=${encodeURIComponent(newPassword)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            showAlert(data.message, data.success ? "success" : "danger");
+
+            if (data.success) {
+                document.querySelector("#current_password").value = "";
+                document.querySelector("#new_password").value = "";
+                document.querySelector("#confirm_password").value = "";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            showAlert("Something went wrong. Please try again.", "danger");
+        });
+    });
+});
+
+// Function to show alert messages
+function showAlert(message, type) {
+    const alertBox = document.querySelector("#alertBox");
+    alertBox.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+    alertBox.style.display = "block";
+
+    // Hide the alert after 3 seconds
+    setTimeout(() => {
+        alertBox.style.display = "none";
+    }, 3000);
 }
 

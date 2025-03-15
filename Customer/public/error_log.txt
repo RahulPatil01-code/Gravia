@@ -1,0 +1,24 @@
+[14-Mar-2025 12:29:58 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 27
+[14-Mar-2025 15:53:17 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 10
+[14-Mar-2025 15:53:20 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 10
+[14-Mar-2025 15:55:04 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 15:55:08 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 15:56:51 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 15:57:31 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 15:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 15:57:58 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 16:28:41 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\Gravia\Customer\includes\header.php:1) in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 15
+[14-Mar-2025 16:29:49 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 13
+[14-Mar-2025 16:29:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 13
+[14-Mar-2025 16:29:49 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 18
+[14-Mar-2025 16:29:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\Gravia\Customer\public\change_password.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 18
+[14-Mar-2025 16:30:07 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 13
+[14-Mar-2025 16:30:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 13
+[14-Mar-2025 16:30:07 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 18
+[14-Mar-2025 16:30:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\Gravia\Customer\public\change_password.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gravia\Customer\public\change_password.php on line 18

@@ -1,51 +1,61 @@
-<?php // Adjust path if needed
+<div class="container mt-4">
+    <div class="card p-4 shadow">
+        <h2 class="mb-3"><b>Change Password</b></h2>
 
-file_put_contents("debug_log.txt", print_r($_POST, true));
+        <form id="changePasswordForm">
+            <label>Current Password</label>
+            <input type="password" name="current_password" class="form-control mb-2" placeholder="Enter current password" required>
+
+            <label>New Password</label>
+            <input type="password" name="new_password" class="form-control mb-2" placeholder="Enter new password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" class="form-control mb-3" placeholder="Confirm new password" required>
+
+            <!-- ✅ MESSAGE BOX FOR SHOWING SUCCESS/ERROR -->
+            <div id="password-msg" class="alert" style="display: none;"></div>
+
+            <button type="submit" class="btn btn-success w-100">Update Password</button>
+        </form>
+    </div>
+</div>
 
 
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $user_id = $_SESSION['id']; // Assuming session holds the user ID
-    $current_password = $_POST['current_password'];
-    $new_password = $_POST['new_password'];
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("changePasswordForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from refreshing page
 
-    // Fetch user's current password from DB
-    $stmt = $conn->prepare("SELECT password FROM users WHERE id = ?");
-    $stmt->bind_param("i", $user_id);
-    $stmt->execute();
-    $stmt->store_result();
-    
-    if ($stmt->num_rows === 1) {
-        $stmt->bind_result($stored_password);
-        $stmt->fetch();
-        
-        if (password_verify($current_password, $stored_password)) {
-            // Hash new password and update DB
-            $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $update_stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
-            $update_stmt->bind_param("si", $hashed_password, $user_id);
-            
-            if ($update_stmt->execute()) {
-                echo json_encode(["success" => true]);
-            } else {
-                echo json_encode(["success" => false, "message" => "Failed to update password."]);
+        let formData = new FormData(this);
+
+        fetch("profile.php?page=change_password", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json()) // Expect JSON response
+        .then(data => {
+            let msgBox = document.getElementById("password-msg");
+            msgBox.style.display = "block"; 
+            msgBox.innerHTML = data.message;
+            msgBox.className = data.success ? "alert alert-success" : "alert alert-danger";
+
+            if (data.success) {
+                setTimeout(() => window.location.reload(), 2000); // Reload after success
             }
-        } else {
-            echo json_encode(["success" => false, "message" => "Current password is incorrect."]);
-        }
-    } else {
-        echo json_encode(["success" => false, "message" => "User not found."]);
-    }
-    
-    $stmt->close();
-    $conn->close();
-} else {
-    echo json_encode(["success" => false, "message" => "Invalid request."]);
-}
-?>
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    });
+});
+</script>
+
+
 
 <style>
-    .password-form {
+.password-form {
     width: 100%;
     max-width: 400px;
     margin: auto;
@@ -85,11 +95,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 #password-msg {
-    text-align: center;
-    margin-top: 10px;
-}
-
-#password-msg {
     display: none;
     padding: 10px;
     border-radius: 5px;
@@ -112,33 +117,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
-
-.fade-in {
-    opacity: 1;
-}
-
-
-    </style>
-<div class="container">
-    <h3>Change Password</h3>
-    
-    <form id="changePasswordForm" method="POST">
-    <div class="password-form">
-        <label for="current_password">Current Password</label>
-        <input type="password" id="current_password" name="current_password" placeholder="Enter current password" required>
-
-        <label for="new_password">New Password</label>
-        <input type="password" id="new_password" name="new_password" placeholder="Enter new password" required>
-
-        <label for="confirm_password">Confirm Password</label>
-        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm new password" required>
-
-        <button type="submit">Update Password</button>
-
-        <p id="password-msg" style="display:none;"></p> <!-- Display success/error message -->
-    </div>
-</form>
-</div>
-
-
-<script src="profile.js"></script>
+</style>
